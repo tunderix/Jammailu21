@@ -16,6 +16,8 @@ Liittykää tiimiin tuolla global game jam -palvelussa
 
 > Unity Versio: Uusin Beta // 2020.2.0b14.3668
 
+Discordissa yhteinen kommunikointi okke, --> [BringMeBananaDummkopf](https://discord.gg/rMb4ubJnSV) <--
+
 ### Koodieditori
 
 [VSCode](https://code.visualstudio.com/)
