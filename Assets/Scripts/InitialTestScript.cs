@@ -12,4 +12,9 @@ public class InitialTestScript : MonoBehaviour
     {
         Debug.Log("ToimMiiiiMiiiiMiiii!");
     }
+
+    private void Update()
+    {
+        //Ramonan push
+    }
 }
