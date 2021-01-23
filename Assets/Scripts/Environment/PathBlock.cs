@@ -9,12 +9,14 @@ namespace TerraFirma.ConnectedEnvironment
         [SerializeField] GameObject connectorIn;
         [SerializeField] GameObject connectorOut;
         private List<IConnector> _outConnectors;
+        private bool areaRevealed = false;
 
         private void OnTriggerEnter(Collider other)
         {
             Revealer revealer = other.GetComponent<Revealer>();
-            if (revealer != null)
+            if (revealer != null && !areaRevealed)
             {
+                areaRevealed = true;
                 GameObject.Find("Environment").GetComponent<EnvironmentController>().GenerateBlock(_outConnectors.First());
             }
         }
@@ -38,7 +40,6 @@ namespace TerraFirma.ConnectedEnvironment
         {
             Vector3 position = this.transform.position;
             Quaternion rotation = Quaternion.identity;
-            rotation.y = 90f;
             Vector3 neededOffset = connector.Position - this.connectorIn.GetComponent<IConnector>().Position;
             position += neededOffset;
             this.transform.SetPositionAndRotation(position, rotation);

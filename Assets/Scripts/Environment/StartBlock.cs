@@ -14,6 +14,8 @@ namespace TerraFirma.ConnectedEnvironment
 
         private List<IConnector> _outConnectors;
 
+        [SerializeField] private EnvironmentController environment;
+
         private void Awake()
         {
             _outConnectors = new List<IConnector>();
@@ -21,7 +23,8 @@ namespace TerraFirma.ConnectedEnvironment
 
         private void Start()
         {
-            _outConnectors.Add(connectorOut.GetComponent<Connector>());
+            connectorOut.GetComponent<Connector>();
+            environment.GenerateBlock(connectorOut);
         }
 
 

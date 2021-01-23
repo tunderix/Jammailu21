@@ -16,12 +16,6 @@ namespace TerraFirma.ConnectedEnvironment
 
         private void Start()
         {
-
-            StartBlock startBlock = (StartBlock)GameObject.Find("Terrain").GetComponent<StartBlock>();
-
-            //Exceptional Handling for first blocks
-
-            GenerateBlock(startBlock.Out);
         }
 
         public void GenerateBlock(IConnector outConnector)
@@ -48,8 +42,12 @@ namespace TerraFirma.ConnectedEnvironment
                     chosenBlock = block;
                 }
             }
-            registeredPossibleBlockPrefabs.Remove(chosenBlock.GO);
+            if (chosenBlock != null)
+            {
+                registeredPossibleBlockPrefabs.Remove(chosenBlock.GO);
 
+                return chosenBlock;
+            }
             return chosenBlock;
         }
     }
