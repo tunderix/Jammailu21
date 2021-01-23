@@ -8,7 +8,7 @@ namespace TerraFirma.Environment
     {
         [SerializeField] private AccessibleBlock accessibleBlockPrefab;
         [SerializeField] private InaccessibleBlock inaccessibleBlockPrefab;
-        private List<EnvironmentObserver> environmentObservers;
+        [SerializeField] private List<EnvironmentObserver> environmentObservers;
         private EnvironmentObserver defaultObserver { get => environmentObservers != null ? environmentObservers.First() : null; }
 
         private void Awake()
@@ -24,7 +24,14 @@ namespace TerraFirma.Environment
             GenerateTerraBlock();
         }
 
-        private bool TimeToGenerateTerraBlock { get => true; }
+        private bool TimeToGenerateTerraBlock
+        {
+            get
+            {
+                if (defaultObserver == null) return false;
+                return true;
+            }
+        }
         private bool ObserverDemandsNewBlock
         {
             get
@@ -40,9 +47,10 @@ namespace TerraFirma.Environment
         private void GenerateTerraBlock()
         {
             if (defaultObserver == null) return;
+
             Vector3 terraBlockPosition = new Vector3(defaultObserver.transform.position.x * 2, defaultObserver.transform.position.y, defaultObserver.transform.position.z * 2);
             AccessibleBlock go = GameObject.Instantiate(accessibleBlockPrefab, terraBlockPosition, Quaternion.identity);
-            defaultObserver.SetAnchor(go);
+            environmentObservers.First().SetAnchor(go);
         }
 
         public bool RegisterObserver(EnvironmentObserver observer)

@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace TerraFirma.Environment
 {
+    [System.Serializable]
     public class EnvironmentObserver : MonoBehaviour
     {
         private ITerraBlock anchoredBlock;
@@ -12,6 +13,10 @@ namespace TerraFirma.Environment
         private void Awake()
         {
             anchoredBlock = startBlock;
+        }
+
+        private void Start()
+        {
             environmentController.RegisterObserver(this);
         }
 
