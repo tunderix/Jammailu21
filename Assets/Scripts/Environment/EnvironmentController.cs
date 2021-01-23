@@ -12,15 +12,16 @@ namespace TerraFirma.ConnectedEnvironment
 
         private void Awake()
         {
-            startBlock = (ITerraBlock)GameObject.Find("Terrain").GetComponent<StartBlock>();
         }
 
         private void Start()
         {
-            //Exceptional Handling for first blocks
-            IConnector randomOutConnector = RandomConnector(startBlock.Outs);
 
-            GenerateBlock(randomOutConnector);
+            StartBlock startBlock = (StartBlock)GameObject.Find("Terrain").GetComponent<StartBlock>();
+
+            //Exceptional Handling for first blocks
+
+            GenerateBlock(startBlock.Out);
         }
 
         public void GenerateBlock(IConnector outConnector)

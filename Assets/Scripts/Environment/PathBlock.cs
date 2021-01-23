@@ -32,6 +32,8 @@ namespace TerraFirma.ConnectedEnvironment
 
         public ConnectorType InType => ConnectorType.A; // atm must match the In-Connector
 
+        public Vector3 Position => this.transform.position;
+
         public void SetPositionBasedOn(IConnector connector)
         {
             Vector3 position = this.transform.position;

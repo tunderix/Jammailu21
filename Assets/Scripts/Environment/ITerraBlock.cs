@@ -11,4 +11,5 @@ namespace TerraFirma.ConnectedEnvironment
         public GameObject GO { get; }
         public void SetPositionBasedOn(IConnector connector);
     }
+
 }
