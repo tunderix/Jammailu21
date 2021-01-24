@@ -9,7 +9,7 @@ namespace TerraFirma.Movement
 
         Rigidbody _rigidbody { get => this.gameObject.GetComponent<Rigidbody>(); }
 
-        private void Update()
+        private void FixedUpdate()
         {
             Vector3 moveForce = Vector3.zero;
 
