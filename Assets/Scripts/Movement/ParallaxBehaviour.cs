@@ -23,6 +23,7 @@ namespace TerraFirma.ParallaxMovement
         {
             MoveShip();
         }
+        
 
         protected void MoveShip()
         {
