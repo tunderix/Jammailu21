@@ -9,6 +9,8 @@ namespace TerraFirma.ParallaxMovement
     {
         [SerializeField] private List<ParallaxBehaviour> ObjectsToSpawn;
         [SerializeField] private float spawnFrequency;
+        [SerializeField] private float objectSpeedModifier;
+        [SerializeField] private float objectMinimumSpeed;
 
         private void Start()
         {
@@ -23,9 +25,16 @@ namespace TerraFirma.ParallaxMovement
             {
                 Vector3 position = ParallaxHelpers.RandomPointInsideBounds(_collider.bounds);
                 ParallaxBehaviour go = GameObject.Instantiate(ObjectsToSpawn.First(), position, Quaternion.identity);
+                go.ElevationSpeedModifier = ElevationSpeedModifier();
                 go.transform.SetParent(this.transform);
                 yield return new WaitForSeconds(3);
             }
+        }
+
+        private float ElevationSpeedModifier()
+        {
+            float modifier = objectSpeedModifier * this.transform.localPosition.y;
+            return modifier < objectMinimumSpeed ? objectMinimumSpeed : modifier;
         }
     }
 }
