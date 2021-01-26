@@ -7,12 +7,12 @@ namespace TerraFirma
     public class Terrain : MonoBehaviour
     {
 
-        [SerializeField] PlayerData playerdata;
+        [SerializeField] Player player;
         public void updatePlayerHealth()
         {
-            //PlayerData playerdata = GameObject.Find("Player").GetComponent<PlayerData>();
+            //Player player = GameObject.Find("Player").GetComponent<Player>();
             //int elinvoimapisteet = playerdata.getElinvoimapisteet();
-            int minimumHealth = playerdata.getMinimumHealth();
+            //int minimumHealth = playerdata.getMinimumHealth();
         }
     }
 }
