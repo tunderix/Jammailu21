@@ -7,23 +7,18 @@ namespace TerraFirma
     [System.Serializable]
     public class PlayerHealthController
     {
-        [SerializeField] private int healthInitial;
-        private int healthCurrent;
+        private int healthInitial;
+        [SerializeField] private int healthCurrent;
 
         public PlayerHealthController(int _healthInitial)
         {
             healthInitial = _healthInitial;
-            setHealth(_healthInitial);
+            ResetHealth();
         }
 
         public void setHealth(int value)
         {
             healthCurrent = value;
-        }
-
-        void Start()
-        {
-            ResetHealth();
         }
 
         // Sets the player's current health back to its initial value
@@ -33,56 +28,38 @@ namespace TerraFirma
         }
 
         //Call this if hit by enemy
-        public void TakeDamage(int damageAmount)
+        public bool TakeDamage(int damageAmount)
         {
-            healthCurrent -= damageAmount;
-
-            if (healthCurrent <= 0)
-            {
-                //Kill player
-                //Destroy(GameObject);
-            }
-
-            // NB: Here, you may want to restart the game
-            // (e.g. by informing your game manager that the player has died,
-            // or by raising an event using your event system)
+            return AlterHealth(damageAmount);
         }
 
         // Increase the player's current health
-        public void Heal(int healAmount)
+        public bool Heal(int healAmount)
         {
-            healthCurrent += healAmount;
+            return AlterHealth(healAmount);
+        }
 
-            if (healthCurrent > healthInitial)
+        public bool AlterHealth(int amount)
+        {
+            healthCurrent += amount;
+            healthCurrent = Mathf.Clamp(healthCurrent, 0, healthInitial);
+            bool isDead = CheckDead();
+            if (isDead)
             {
-                ResetHealth();
+                //Here we know player is dead
+                //GetComponent<Movement>().enabled = false;
             }
+            return isDead;
         }
 
 
-
-
-
-        /*         
-        OG SCRIPT BY SAMI  
-        
-        public PlayerHealthController(int minimumHealth)
-                {
-                    healthMinimum = minimumHealth;
-                    setHealth(minimumHealth);
-                }
-
-                public void setHealth(int value)
-                {
-                    healthCurrent = value;
-                }
-
-                public int startHealth()
-                {
-                    if (healthCurrent < healthMinimum)
-                        return healthMinimum;
-                    else return healthCurrent;
-                } */
-
+        private bool CheckDead()
+        {
+            if (healthCurrent < 1)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

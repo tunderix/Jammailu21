@@ -14,7 +14,7 @@ namespace TerraFirma
 
             if (player != null)
             {
-                player.AlterHealth(healAmount);
+                player.Heal(healAmount);
                 gameObject.SetActive(false);
             }
         }

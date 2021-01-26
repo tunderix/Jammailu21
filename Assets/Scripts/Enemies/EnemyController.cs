@@ -4,8 +4,9 @@ using UnityEngine;
 
 namespace TerraFirma
 {
-    public class Voittoehdot
+    public class EnemyController : MonoBehaviour
     {
+        [SerializeField] private int damageAmount;
 
     }
 }

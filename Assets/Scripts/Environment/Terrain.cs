@@ -11,8 +11,8 @@ namespace TerraFirma
         public void updatePlayerHealth()
         {
             //Player player = GameObject.Find("Player").GetComponent<Player>();
-            //int elinvoimapisteet = playerdata.getElinvoimapisteet();
-            //int minimumHealth = playerdata.getMinimumHealth();
+            //int elinvoimapisteet = player.getElinvoimapisteet();
+            //int minimumHealth = player.getMinimumHealth();
         }
     }
 }

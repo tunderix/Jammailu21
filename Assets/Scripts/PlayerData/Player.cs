@@ -1,22 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 namespace TerraFirma
 {
     [System.Serializable]
-    public class Player
+    public class Player : MonoBehaviour
     {
-        [SerializeField] private PlayerHealthController healthInitial;
+        [SerializeField] private PlayerHealthController healthController;
         public Apple apple;
-        [SerializeField] private int healthCurrent;
+        [SerializeField] private int healthInitial;
         //public Text currentHealthLabel;
         //public Image deadScreen;
-        private bool isDead;
+        [SerializeField] private bool isDead;
 
         void Start()
         {
-            healthCurrent = new PlayerHealthController healthInitial;
+            healthController = new PlayerHealthController(healthInitial);
             isDead = false;
             //updateGUI();
         }
@@ -26,24 +27,20 @@ namespace TerraFirma
             //currentHealthLabel.text = currentHealth.ToString();
             //deadScreen.gameObject.SetActive(isDead);
         }
-        public void AlterHealth(int amount)
+
+        private void GoToDeadScreen()
         {
-            healthCurrent += amount;
-            healthCurrent = Mathf.Clamp(healthCurrent, 0, healthInitial);
-            CheckDead();
-            UpdateGUI();
+            SceneManager.LoadScene("deadScreen", LoadSceneMode.Additive);
         }
 
-        private void CheckDead()
+        public bool TakeDamage(int damageAmount)
         {
-            //dont redo if already dead.
-            if (isDead)
-                return;
-            if (healthCurrent == 0)
-            {
-                isDead = true;
-                //GetComponent<Movement>().enabled = false;
-            }
+            return healthController.AlterHealth(damageAmount);
+        }
+
+        public bool Heal(int healAmount)
+        {
+            return healthController.AlterHealth(healAmount);
         }
 
     }
