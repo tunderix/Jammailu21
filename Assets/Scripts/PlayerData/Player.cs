@@ -22,6 +22,14 @@ namespace TerraFirma
             //updateGUI();
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                TakeDamage(1);
+            }
+        }
+
         void UpdateGUI()
         {
             //currentHealthLabel.text = currentHealth.ToString();
@@ -35,7 +43,7 @@ namespace TerraFirma
 
         public bool TakeDamage(int damageAmount)
         {
-            return healthController.AlterHealth(damageAmount);
+            return healthController.AlterHealth(-damageAmount);
         }
 
         public bool Heal(int healAmount)
