@@ -9,17 +9,23 @@ namespace TerraFirma
     public class Player : MonoBehaviour
     {
         [SerializeField] private PlayerHealthController healthController;
-        public Apple apple;
+        public int apples;
         [SerializeField] private int healthInitial;
         //public Text currentHealthLabel;
         //public Image deadScreen;
         [SerializeField] private bool isDead;
 
+        [SerializeField] private List<WinCondition> winConditions;
+        public WinCondition ApplecountWincondition;
         void Start()
         {
             healthController = new PlayerHealthController(healthInitial);
             isDead = false;
+            SetupWinconditions();
             //updateGUI();
+            //WinCondition.count = 0;
+            //WinCondition.winText.text = "";
+            //WinCondition.SetCountText ();
         }
 
         private void Update()
@@ -51,44 +57,23 @@ namespace TerraFirma
             return healthController.AlterHealth(healAmount);
         }
 
-    }
-}
-/*OG SCRIPT BY SAMI
-namespace TerraFirma
-{
-    public class PlayerData : MonoBehaviour
-    {
-
-        [SerializeField] int healthInitial;
-        [SerializeField] private PlayerHealthController healthCurrent;
-        public Apple apple;
-        private void Awake()
+        public void AddWincondition(WinCondition _winCondition)
         {
-            apple = new Apple();
-            healthCurrent = new PlayerHealthController(healthInitial);
+            winConditions.Add(_winCondition);
         }
 
-        private void Update()
+        public void SetupWinconditions()
         {
-            int Health = healthCurrent.healthInitial();
-            Debug.Log("Health" + Health);
+            ApplecountWincondition = new WinCondition();
+            //AddWincondition(collectApples);
         }
 
-        private void Start()
+        public void PlayerGotApple(int count)
         {
-
-        }
-
-        public int getMinimumHealth()
-        {
-            return 0;
-        }
-
-        public bool appleHasBeenThrown()
-        {
-            return apple.getThrown();
+            apples = apples + count;
+            ApplecountWincondition.count = apples;
+            //TODO Show victory in UI
+            bool PlayerWonWithApples = ApplecountWincondition.CheckWinCondition();
         }
     }
 }
-
-*/

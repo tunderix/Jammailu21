@@ -6,28 +6,24 @@ namespace TerraFirma
 {
     public class WinCondition
     {
-        private int count = 0;
-        public string GUIText;
+        public int count;
+        private int maxItems;
 
-        private void OnCollisionWithPlayer(GameObject player)
+
+        public WinCondition()
         {
-            count += 1;
-            //GameObject.Destroy("Gem").GetComponent<Item>();
+            count = 0;
+            maxItems = 30;
         }
 
-        /*         void Update()
-                {
-                    if (count >= 10)
-                    {
-                        g = new GameObject;
-                        text = g.AddComponent(GUIText);
-                        Text.text = "Retry? | Quit?";
-
-                        text.transform.position = new Vector3(0.5f, 0.5f, 0);
-
-                        text.Anchor = TextAnchor.MiddleCenter;
-                    }
-                } */
+        public bool CheckWinCondition()
+        {
+            if (count >= maxItems)
+            {
+                return true;
+            }
+            return false;
+        }
 
     }
 }
