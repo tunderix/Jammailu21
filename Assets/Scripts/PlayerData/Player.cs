@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using TerraFirma.UI;
 
 namespace TerraFirma
 {
@@ -9,6 +10,8 @@ namespace TerraFirma
     public class Player : MonoBehaviour
     {
         [SerializeField] private PlayerHealthController healthController;
+        [SerializeField] private UIHealthController uiController;
+
         public Apple apple;
         [SerializeField] private int healthInitial;
         //public Text currentHealthLabel;
@@ -28,6 +31,12 @@ namespace TerraFirma
             {
                 TakeDamage(1);
             }
+        }
+
+        private void OnGUI()
+        {
+            uiController.UpdateHealth(healthController.getHealth(), healthController.getHealthInitial());
+
         }
 
         void UpdateGUI()
