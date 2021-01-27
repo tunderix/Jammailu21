@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using TerraFirma.UI;
 
 namespace TerraFirma
 {
@@ -10,6 +11,9 @@ namespace TerraFirma
     {
         [SerializeField] private PlayerHealthController healthController;
         public int apples;
+        [SerializeField] private UIHealthController uiController;
+
+        public Apple apple;
         [SerializeField] private int healthInitial;
         //public Text currentHealthLabel;
         //public Image deadScreen;
@@ -34,6 +38,12 @@ namespace TerraFirma
             {
                 TakeDamage(1);
             }
+        }
+
+        private void OnGUI()
+        {
+            uiController.UpdateHealth(healthController.getHealth(), healthController.getHealthInitial());
+
         }
 
         void UpdateGUI()

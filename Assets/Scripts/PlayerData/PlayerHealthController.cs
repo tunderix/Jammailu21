@@ -16,6 +16,16 @@ namespace TerraFirma
             ResetHealth();
         }
 
+        public int getHealthInitial()
+        {
+            return healthInitial;
+        }
+
+        public int getHealth()
+        {
+            return healthCurrent;
+        }
+
         public void setHealth(int value)
         {
             healthCurrent = value;
