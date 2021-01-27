@@ -4,10 +4,22 @@ using UnityEngine;
 
 namespace TerraFirma
 {
-    public class Apple
+    public class Apple : MonoBehaviour
     {
+        [SerializeField] private WinCondition winCondition;
         private float size;
         private bool hasBeenThrown;
+        [SerializeField] private int count;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Player player = other.GetComponent<Player>();
+            if (player != null)
+            {
+                player.PlayerGotApple(count);
+                GameObject.Destroy(this.gameObject);
+            }
+        }
 
         public float getSize()
         {
