@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace TerraFirma.Movement
 {
@@ -6,6 +7,8 @@ namespace TerraFirma.Movement
     public class FixedMovement : MonoBehaviour
     {
         [SerializeField] private float speed;
+        [SerializeField] private Animator playerAnimator;
+
 
         Rigidbody _rigidbody { get => this.gameObject.GetComponent<Rigidbody>(); }
 
@@ -22,7 +25,11 @@ namespace TerraFirma.Movement
             if (Input.GetKey(KeyCode.S))
                 moveForce += MoveDirection.Down;
 
-            transform.Translate(moveForce * speed * Time.deltaTime);
+            playerAnimator.SetBool("isRunning", moveForce != Vector3.zero);
+
+            NavMeshAgent a = this.gameObject.GetComponent<NavMeshAgent>();
+            a.Move(moveForce * speed * Time.deltaTime);
+            //transform.Translate(moveForce * speed * Time.deltaTime);
         }
     }
 }

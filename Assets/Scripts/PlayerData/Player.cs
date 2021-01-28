@@ -42,8 +42,8 @@ namespace TerraFirma
 
         private void OnGUI()
         {
-            uiController.UpdateHealth(healthController.getHealth(), healthController.getHealthInitial());
-
+            // TODO - Temporary disable because throwing null pointers.
+            //uiController.UpdateHealth(healthController.getHealth(), healthController.getHealthInitial());
         }
 
         void UpdateGUI()
