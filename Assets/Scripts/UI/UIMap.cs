@@ -11,9 +11,19 @@ namespace TerraFirma.UI
         [SerializeField] private UIMapIndicator targetLocationIndicator;
         [SerializeField] private GameObject linePrefab;
         private List<GameObject> lines;
+        [SerializeField] private MapRoute currentRoute;
+        [SerializeField] private MapRoute drawnRoute;
+
+        private int initialTimeForNextIsland = -1;
+        [SerializeField] private int timeToNextIsland = -1;
+
+        private bool travelling;
 
         private void Start()
         {
+            currentRoute = null;
+            drawnRoute = null;
+            travelling = false;
             lines = new List<GameObject>();
             playerLocationIndicator.SetLocation(new Vector3(0, 0, 0));
         }
@@ -21,6 +31,26 @@ namespace TerraFirma.UI
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.M)) ToggleMap();
+            if (Input.GetKeyDown(KeyCode.N)) ChooseRoute();
+
+            if (currentRoute != null && !mapView.activeSelf) travelling = true;
+            else travelling = false;
+
+            if (timeToNextIsland > 0 && travelling) timeToNextIsland--;
+            else if (timeToNextIsland == 0) RouteFinished();
+        }
+
+        private void RouteFinished()
+        {
+            currentRoute = null; //This here makes travelling set to false
+        }
+
+        private void ChooseRoute()
+        {
+            if (drawnRoute == null) return;
+            currentRoute = drawnRoute;
+            timeToNextIsland = (int)currentRoute.TotalTravelTime();
+            initialTimeForNextIsland = timeToNextIsland;
         }
 
         public void SetTargetIndicatorLocation(BaseEventData data)
@@ -29,8 +59,14 @@ namespace TerraFirma.UI
             float borders = 20;
             Vector3 newLocation = new Vector3(pData.pressPosition.x - borders, pData.pressPosition.y - borders, 0);
             targetLocationIndicator.SetLocation(newLocation);
+
+            drawnRoute = new MapRoute();
+            Vector3 playerLoc = playerLocationIndicator.GetComponent<RectTransform>().localPosition;
+            drawnRoute.StartPosition = playerLoc;
+            drawnRoute.TargetPosition = newLocation;
+
             ClearLines();
-            DrawLine(playerLocationIndicator.GetComponent<RectTransform>().localPosition, newLocation);
+            DrawLine(playerLoc, newLocation);
         }
 
         private void ClearLines()
