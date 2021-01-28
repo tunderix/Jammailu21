@@ -161,8 +161,8 @@ Shader "Custom/shader_Environment_Foliage01"
 }
 /*ASEBEGIN
 Version=18800
--1538;204;1424;722;2015.185;68.61847;1.827832;True;True
-Node;AmplifyShaderEditor.ColorNode;2;-1160.069,212.6387;Inherit;False;Property;_Shadow;Shadow;2;0;Create;True;0;0;0;False;0;False;1,1,1,0;0.2980392,0.5058824,0.07058824,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+-1603;131;1424;722;2015.185;68.61847;1.827832;True;True
+Node;AmplifyShaderEditor.ColorNode;2;-1160.069,212.6387;Inherit;False;Property;_Shadow;Shadow;2;0;Create;True;0;0;0;False;0;False;1,1,1,0;0.2418409,0.3962264,0.07289071,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.ColorNode;8;-1152.752,612.2861;Inherit;False;Property;_Light;Light;3;0;Create;True;0;0;0;False;0;False;0,0,0,0;0.4156863,0.6784314,0.09411766,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SamplerNode;1;-1200.414,405.8866;Inherit;True;Property;_TextureSample0;Texture Sample 0;1;0;Create;True;0;0;0;False;0;False;-1;04d47a271246c5d46bb2ec7bcd615a4e;04d47a271246c5d46bb2ec7bcd615a4e;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;3;-743.4194,282.7268;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
@@ -180,4 +180,4 @@ WireConnection;6;2;4;0
 WireConnection;0;10;1;4
 WireConnection;0;13;6;0
 ASEEND*/
-//CHKSM=22F480E09ADADAF5AF64FE0669703F900B3AEBC0
+//CHKSM=97D93B57957F5077E348E0135E8BCF9F22A8C81F

@@ -1,23 +1,12 @@
 fileFormatVersion: 2
-guid: 6900f6270e0f9a64cbe320af8204197b
+guid: 8edbc6982f28d284085c8a9635cec219
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -7744823490492785362
     second: Running01
-  - first:
-      74: 8505601633565358976
-    second: Walking01
-  - first:
-      74: -4686236559480434990
-    second: IdleBreath01
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material #5
-    second: {fileID: 2100000, guid: 59693adb9c758a24cb54c5c6206d0cd1, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -28,7 +17,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: <Root Transform>
+    motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
@@ -80,7 +69,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0

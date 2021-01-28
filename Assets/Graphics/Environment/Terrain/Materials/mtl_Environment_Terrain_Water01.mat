@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mtl_Base01
-  m_Shader: {fileID: 4800000, guid: a654f015d437ec84985f85497411d73f, type: 3}
+  m_Name: mtl_Environment_Terrain_Water01
+  m_Shader: {fileID: 4800000, guid: 13783d8afd86beb4c8a67e97ff36f147, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -55,10 +55,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: d2f08d2919a5d7341aaf90cf803e8b3a, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -68,8 +64,8 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Float0: 0.05
-    - _Float1: 0
+    - _Float1: 0.01
+    - _Float2: 17.6
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -85,7 +81,7 @@ Material:
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0, g: 0, b: 0, a: 0}
+    - _Color2: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Light: {r: 1, g: 0.89110327, b: 0.6556604, a: 0}
-    - _Shadow: {r: 0.6509434, g: 0.5228391, b: 0.31626025, a: 0}
   m_BuildTextureStacks: []
