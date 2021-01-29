@@ -11,7 +11,7 @@ namespace TerraFirma
     {
         [SerializeField] private PlayerHealthController healthController;
         public int apples;
-        [SerializeField] private UIHealthController uiController;
+        [SerializeField] private UIHealthController uiHealthController;
 
         public Apple apple;
         [SerializeField] private int healthInitial;
@@ -24,8 +24,10 @@ namespace TerraFirma
         void Start()
         {
             healthController = new PlayerHealthController(healthInitial);
+            uiHealthController = new UIHealthController(healthInitial);
             isDead = false;
             SetupWinconditions();
+            uiHealthController.setupHealthBar(healthInitial);
             //updateGUI();
             //WinCondition.count = 0;
             //WinCondition.winText.text = "";
@@ -42,8 +44,8 @@ namespace TerraFirma
 
         private void OnGUI()
         {
-            // TODO - Temporary disable because throwing null pointers.
-            //uiController.UpdateHealth(healthController.getHealth(), healthController.getHealthInitial());
+
+            uiHealthController.UpdateHealth(healthController.getHealth());
         }
 
         void UpdateGUI()
