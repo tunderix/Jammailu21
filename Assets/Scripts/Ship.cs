@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.AI;
+
 namespace TerraFirma
 {
     public class Ship : MonoBehaviour
@@ -10,6 +12,7 @@ namespace TerraFirma
         private void Start()
         {
             anchorIsDown = false;
+
         }
 
         private void Update()
@@ -18,7 +21,7 @@ namespace TerraFirma
             {
                 speed -= 0.5f * Time.deltaTime;
             }
-            if (speed < 0f)
+            if (speed <= 0f)
             {
                 speed = 0f;
             }
