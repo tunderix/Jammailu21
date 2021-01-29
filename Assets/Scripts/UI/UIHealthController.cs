@@ -9,12 +9,18 @@ namespace TerraFirma.UI
 {
     public class UIHealthController : MonoBehaviour
     {
-        TextMeshProUGUI healthTextGUI;
+        public HealthText healthText;
+        public HealthBar healthBar;
 
         // Start is called before the first frame update
+
+        public UIHealthController(int initialHealth)
+        {
+            setupHealthBar(initialHealth);
+        }
         void Start()
         {
-            healthTextGUI = gameObject.GetComponent<TextMeshProUGUI>();
+            //   healthTextGUI = gameObject.GetComponent<TextMeshProUGUI>();
         }
 
         // Update is called once per frame
@@ -23,20 +29,25 @@ namespace TerraFirma.UI
 
         }
 
-        public void UpdateHealth(int currentHealth, int maxHealth)
+        public void setupHealthBar(int maxHealth)
         {
-            UpdateHealthBar(currentHealth, maxHealth);
+            healthBar.SetMaxHealth(maxHealth);
+        }
+
+        public void UpdateHealth(int currentHealth)
+        {
+            UpdateHealthBar(currentHealth);
             UpdateHealthText(currentHealth);
         }
 
-        private void UpdateHealthBar(int currentHealth, int maxHealth)
+        private void UpdateHealthBar(int currentHealth)
         {
-
+            healthBar.SetHealth(currentHealth);
         }
 
         private void UpdateHealthText(int currentHealth)
         {
-            healthTextGUI.text = currentHealth.ToString();
+            healthText.SetHealth(currentHealth);
         }
 
 
