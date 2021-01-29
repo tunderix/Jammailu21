@@ -7,6 +7,7 @@ namespace TerraFirma.InspirationSystem
     {
         [SerializeField] private int inspirationChange;
         [SerializeField] private float tickTimer;
+        [SerializeField] private bool singleTime;
 
         private InspirationResponder _responder
         {
@@ -22,7 +23,8 @@ namespace TerraFirma.InspirationSystem
         private void OnTriggerEnter(Collider other)
         {
             _responder = other.gameObject.GetComponent<InspirationResponder>();
-            StartCoroutine(InspirationModification());
+            if (singleTime) InspirationModification();
+            else StartCoroutine(InspirationModification());
         }
 
         private void OnTriggerExit(Collider other)
