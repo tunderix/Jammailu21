@@ -23,14 +23,14 @@ namespace TerraFirma.ParallaxMovement
         {
             MoveShip();
         }
-        
+
 
         protected void MoveShip()
         {
             if (!movementEnabled) return;
 
             Vector3 newPos = this.transform.position;
-            newPos.x -= ship.GetSpeed() * Time.deltaTime;
+            newPos.z -= ship.GetSpeed() * Time.deltaTime;
             transform.SetPositionAndRotation(newPos, this.transform.rotation);
         }
     }

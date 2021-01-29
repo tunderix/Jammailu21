@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1700203899261914865}
   - component: {fileID: -996022479988098970}
+  - component: {fileID: -5660038767478737019}
   m_Layer: 0
   m_Name: prefab_Environment_Foliage_GrassPatch01
   m_TagString: Untagged
@@ -69,6 +70,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementEnabled: 0
   speedVariance: 0
+--- !u!65 &-5660038767478737019
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4941126117359642547}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.87, y: 1, z: 5.03}
+  m_Center: {x: 2.46, y: 0, z: 10.8}
 --- !u!1001 &285605156090813513
 PrefabInstance:
   m_ObjectHideFlags: 0

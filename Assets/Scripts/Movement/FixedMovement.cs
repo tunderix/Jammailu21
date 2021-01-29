@@ -30,6 +30,8 @@ namespace TerraFirma.Movement
 
         private void Rotate(Vector3 to)
         {
+            if (to == Vector3.zero) return;
+
             Quaternion facedirection = Quaternion.LookRotation(to);
             this.transform.rotation = facedirection;
         }
