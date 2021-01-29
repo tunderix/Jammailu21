@@ -10,16 +10,12 @@ namespace TerraFirma.ParallaxMovement
         private void Start()
         {
             ship = (Ship)GameObject.Find("Ship").GetComponent<Ship>();
-            this.SetMovementEnabled(false);
+            this.SetMovementEnabled(true);
+            ship.AnchorDown();
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                this.SetMovementEnabled(true);
-                ship.AnchorDown();
-            }
             MoveShip();
         }
     }

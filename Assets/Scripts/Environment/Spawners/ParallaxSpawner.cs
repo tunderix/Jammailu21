@@ -9,17 +9,29 @@ namespace TerraFirma.ParallaxMovement
     {
         [SerializeField] private List<ParallaxBehaviour> ObjectsToSpawn;
         [SerializeField] private float spawnFrequency;
+        [SerializeField] private Ship ship;
+        private bool spawningEnabled;
 
         private void Start()
         {
+            spawningEnabled = true;
             StartCoroutine(MovingObjectSpawner());
+        }
+
+
+        private void Update()
+        {
+            if (ship.GetSpeed() == 0)
+            {
+                spawningEnabled = false;
+            }
         }
 
         private Collider _collider { get => this.GetComponent<Collider>(); }
 
         IEnumerator<WaitForSeconds> MovingObjectSpawner()
         {
-            while (true)
+            while (spawningEnabled)
             {
                 Vector3 position = ParallaxHelpers.RandomPointInsideBounds(_collider.bounds);
                 ParallaxBehaviour go = GameObject.Instantiate(ObjectsToSpawn.First(), position, Quaternion.identity);
