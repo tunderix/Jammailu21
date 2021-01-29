@@ -3,14 +3,11 @@ using UnityEngine.AI;
 
 namespace TerraFirma.Movement
 {
-    [RequireComponent(typeof(Rigidbody))]
     public class FixedMovement : MonoBehaviour
     {
         [SerializeField] private float speed;
         [SerializeField] private Animator playerAnimator;
-
-
-        Rigidbody _rigidbody { get => this.gameObject.GetComponent<Rigidbody>(); }
+        [SerializeField] private NavMeshAgent navMeshAgent;
 
         private void FixedUpdate()
         {
@@ -27,9 +24,14 @@ namespace TerraFirma.Movement
 
             playerAnimator.SetBool("isRunning", moveForce != Vector3.zero);
 
-            NavMeshAgent a = this.gameObject.GetComponent<NavMeshAgent>();
-            a.Move(moveForce * speed * Time.deltaTime);
-            //transform.Translate(moveForce * speed * Time.deltaTime);
+            navMeshAgent.Move(moveForce * speed * Time.deltaTime);
+            Rotate(moveForce);
+        }
+
+        private void Rotate(Vector3 to)
+        {
+            Quaternion facedirection = Quaternion.LookRotation(to);
+            this.transform.rotation = facedirection;
         }
     }
 }
