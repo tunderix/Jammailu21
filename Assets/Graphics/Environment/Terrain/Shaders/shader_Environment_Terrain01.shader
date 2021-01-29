@@ -161,7 +161,7 @@ Shader "Custom/shader_Environment_Terrain01"
 }
 /*ASEBEGIN
 Version=18800
--1603;131;1424;722;2510.621;313.0836;2.514724;True;True
+-1303;94;1424;722;2510.621;313.0836;2.514724;True;True
 Node;AmplifyShaderEditor.SamplerNode;1;-1851.117,464.4025;Inherit;True;Property;_TextureSample0;Texture Sample 0;1;0;Create;True;0;0;0;False;0;False;-1;dd21cbba5f6d0154c82ce325356602c0;0fa6b03932273e04a93874230ff7f926;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.ColorNode;2;-1823.567,262.0152;Inherit;False;Property;_Shadow;Shadow;2;0;Create;True;0;0;0;False;0;False;0,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.ColorNode;8;-1816.25,661.6628;Inherit;False;Property;_Light;Light;3;0;Create;True;0;0;0;False;0;False;1,1,1,0;1,1,1,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
@@ -180,4 +180,4 @@ WireConnection;6;2;4;0
 WireConnection;0;10;1;4
 WireConnection;0;13;6;0
 ASEEND*/
-//CHKSM=F64BDAA14A083743F4535708B43C4C42AFBA2875
+//CHKSM=70D483CA228A730B53EFF13DC4C081FB983F3EB9
