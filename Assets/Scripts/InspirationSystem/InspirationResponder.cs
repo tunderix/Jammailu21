@@ -4,9 +4,13 @@ namespace TerraFirma.InspirationSystem
 {
     public class InspirationResponder : MonoBehaviour
     {
-        private void OnTriggerEnter(Collider other)
-        {
+        private InspirationController inspirationController;
 
+        public InspirationController InspirationController { set => inspirationController = value; }
+
+        public void ModifyInspiration(int value)
+        {
+            inspirationController.ModifyInspiration(value);
         }
     }
 }
