@@ -1,9 +1,13 @@
 using UnityEngine;
 
-namespace TerraFirma
+namespace TerraFirma.ParallaxMovement
 {
-    public class Island : MonoBehaviour
+    public class Island : ParallaxBehaviour
     {
-
+        private void Start()
+        {
+            ship = (Ship)GameObject.Find("Ship").GetComponent<Ship>();
+            this.SetMovementEnabled(true);
+        }
     }
 }

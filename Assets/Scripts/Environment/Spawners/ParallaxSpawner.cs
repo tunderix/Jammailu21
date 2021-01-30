@@ -36,7 +36,7 @@ namespace TerraFirma.ParallaxMovement
                 Vector3 position = ParallaxHelpers.RandomPointInsideBounds(_collider.bounds);
                 ParallaxBehaviour go = GameObject.Instantiate(ObjectsToSpawn.First(), position, Quaternion.identity);
                 go.transform.SetParent(this.transform);
-                yield return new WaitForSeconds(3);
+                yield return new WaitForSeconds(spawnFrequency);
             }
         }
     }
