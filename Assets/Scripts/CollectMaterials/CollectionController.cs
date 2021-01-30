@@ -17,6 +17,10 @@ namespace TerraFirma.Collection
 
         }
 
+        public int Ice { get => _ice; }
+        public int Cream { get => _cream; }
+        public int Sugar { get => _sugar; }
+
         public void Gather()
         {
             if (currentCollectableMaterial == null) return;
