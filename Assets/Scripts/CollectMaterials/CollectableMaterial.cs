@@ -11,9 +11,15 @@ namespace TerraFirma.Collection
         [SerializeField] private int minCount;
         [SerializeField] private int maxCount;
 
+        private GameObject _childTextObject;
         private void Awake()
         {
             CreateIngredient();
+        }
+
+        private void Start()
+        {
+            _childTextObject = this.transform.GetChild(2).gameObject;
         }
 
         private void OnTriggerEnter(Collider other)
@@ -21,7 +27,7 @@ namespace TerraFirma.Collection
             Player player = other.GetComponent<Player>();
             if (player == null) return;
 
-            //TODO
+            _childTextObject.SetActive(true);
             player.SetCollectableMaterial(this);
         }
 
@@ -30,6 +36,7 @@ namespace TerraFirma.Collection
             Player player = other.GetComponent<Player>();
             if (player == null) return;
 
+            _childTextObject.SetActive(false);
             player.SetCollectableMaterial(null);
         }
 
