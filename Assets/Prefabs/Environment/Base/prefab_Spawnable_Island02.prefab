@@ -1,34 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!54 &3722322215108058255
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2583623659854963955}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 4
-  m_CollisionDetection: 0
---- !u!114 &7592026220240047492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2583623659854963955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a3b143f437a2a429eead5f1b75be12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementEnabled: 0
 --- !u!1 &7013270550503095385
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3901178876667440110}
   - component: {fileID: 1911060645628188665}
+  - component: {fileID: 3148634066497495115}
+  - component: {fileID: 7526696919025582780}
+  - component: {fileID: 1218235299236781406}
   m_Layer: 0
   m_Name: prefab_Spawnable_Island02
   m_TagString: Untagged
@@ -82,6 +56,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementEnabled: 0
+--- !u!33 &3148634066497495115
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7013270550503095385}
+  m_Mesh: {fileID: 8830456623836980391, guid: d1122e49348d3084fa114208854a4224, type: 3}
+--- !u!64 &7526696919025582780
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7013270550503095385}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4692063423613354671, guid: d1122e49348d3084fa114208854a4224, type: 3}
+--- !u!54 &1218235299236781406
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7013270550503095385}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!1001 &202432661808258167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -263,12 +275,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4884758596519181960, guid: 9f9da778db821e84c99c14fcdc17b011, type: 3}
+    - {fileID: 4911940395638456522, guid: 9f9da778db821e84c99c14fcdc17b011, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9f9da778db821e84c99c14fcdc17b011, type: 3}
---- !u!1 &2583623659854963955 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3022449031039310200, guid: 9f9da778db821e84c99c14fcdc17b011, type: 3}
-  m_PrefabInstance: {fileID: 732685303782931851}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2795139595058507953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3233955900644789562, guid: 9f9da778db821e84c99c14fcdc17b011, type: 3}
