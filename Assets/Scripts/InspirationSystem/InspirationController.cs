@@ -10,6 +10,13 @@ namespace TerraFirma.InspirationSystem
         [SerializeField] private int inspiredStateRequirement;
         [SerializeField] private bool inspiredState;
 
+        public int CurrentInspiration { get => _currentInspiration; }
+
+        public int MaxInspiration { get => _maxInspiration; }
+
+
+
+
         public InspirationController(int startInspiration, int maxInspiration)
         {
             _maxInspiration = maxInspiration;

@@ -8,7 +8,7 @@ namespace TerraFirma.InspirationSystem
         [SerializeField] private int startInspiration;
         [SerializeField] private int maxInspiration;
 
-        public InspirationController InspirationController { set => inspirationController = value; }
+        public InspirationController InspirationController { get => inspirationController; set => inspirationController = value; }
 
         private void Awake()
         {
