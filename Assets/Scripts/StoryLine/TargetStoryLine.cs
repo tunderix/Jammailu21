@@ -38,6 +38,7 @@ namespace TerraFirma
             storyComponent.SetText(storyText2.description);
             storyComponent.gameObject.SetActive(true);
             yield return new WaitForSeconds(showTime);
+            storyComponent.gameObject.SetActive(false);
         }
 
     }
