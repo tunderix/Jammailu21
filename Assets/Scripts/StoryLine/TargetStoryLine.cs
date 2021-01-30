@@ -9,10 +9,15 @@ namespace TerraFirma
     {
         [SerializeField] private StoryText storyText;
         [SerializeField] private StoryText storyText2;
-        [SerializeField] private TextMeshPro storyComponent;
+        private TextMeshPro storyComponent;
 
         [SerializeField] private float showTime;
 
+
+        private void Awake()
+        {
+            storyComponent = GameObject.Find("descriptionStory").GetComponent<TextMeshPro>();
+        }
         private void OnTriggerEnter(Collider other)
         {
             Player player = other.GetComponent<Player>();
