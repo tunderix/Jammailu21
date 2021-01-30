@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using TerraFirma.UI;
 using TerraFirma.Collection;
+using TerraFirma.InspirationSystem;
 
 namespace TerraFirma
 {
@@ -15,6 +16,10 @@ namespace TerraFirma
         [SerializeField] private UIHealthController uiHealthController;
 
         [SerializeField] private UICollectibleController uiCollectibleController;
+
+        [SerializeField] private UIInspirationController uiInspirationController;
+
+        [SerializeField] private InspirationResponder inspirationResponder;
 
         public Apple apple;
         [SerializeField] private int healthInitial;
@@ -29,12 +34,13 @@ namespace TerraFirma
         void Start()
         {
             healthController = new PlayerHealthController(healthInitial);
-            //uiHealthController = new UIHealthController(healthInitial);
             collectionController = new CollectionController();
 
             isDead = false;
             SetupWinconditions();
             uiHealthController.setupHealthBar(healthInitial);
+            uiInspirationController.setupInspirationBar(inspirationResponder.InspirationController.CurrentInspiration, inspirationResponder.InspirationController.CurrentInspiration);
+
             //updateGUI();
             //WinCondition.count = 0;
             //WinCondition.winText.text = "";
@@ -49,6 +55,7 @@ namespace TerraFirma
             }
 
             if (Input.GetKeyDown(KeyCode.R)) collectionController.Gather();
+            if (Input.GetKeyDown(KeyCode.T)) inspirationResponder.ModifyInspiration(-5);
 
         }
 
@@ -56,14 +63,9 @@ namespace TerraFirma
         {
             uiHealthController.UpdateHealth(healthController.getHealth());
             uiCollectibleController.UpdateCollectibles(collectionController.Ice, collectionController.Cream, collectionController.Sugar);
-
+            uiInspirationController.UpdateInspiration(inspirationResponder.InspirationController.CurrentInspiration);
         }
 
-        void UpdateGUI()
-        {
-            //currentHealthLabel.text = currentHealth.ToString();
-            //deadScreen.gameObject.SetActive(isDead);
-        }
 
         private void GoToDeadScreen()
         {

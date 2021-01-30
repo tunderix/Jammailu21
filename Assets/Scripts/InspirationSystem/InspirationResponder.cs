@@ -6,7 +6,7 @@ namespace TerraFirma.InspirationSystem
     {
         private InspirationController inspirationController;
 
-        public InspirationController InspirationController { set => inspirationController = value; }
+        public InspirationController InspirationController { get => inspirationController; set => inspirationController = value; }
 
         public void ModifyInspiration(int value)
         {
