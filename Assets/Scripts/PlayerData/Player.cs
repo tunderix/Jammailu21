@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using TerraFirma.UI;
+using TerraFirma.Collection;
 
 namespace TerraFirma
 {
@@ -19,12 +20,16 @@ namespace TerraFirma
         //public Image deadScreen;
         [SerializeField] private bool isDead;
 
+        [SerializeField] private CollectionController collectionController;
+
         [SerializeField] private List<WinCondition> winConditions;
         public WinCondition ApplecountWincondition;
         void Start()
         {
             healthController = new PlayerHealthController(healthInitial);
             uiHealthController = new UIHealthController(healthInitial);
+            collectionController = new CollectionController();
+
             isDead = false;
             SetupWinconditions();
             uiHealthController.setupHealthBar(healthInitial);
@@ -40,12 +45,15 @@ namespace TerraFirma
             {
                 TakeDamage(1);
             }
+
+            if (Input.GetKeyDown(KeyCode.R)) collectionController.Gather();
+
         }
 
         private void OnGUI()
         {
 
-            uiHealthController.UpdateHealth(healthController.getHealth());
+            //uiHealthController.UpdateHealth(healthController.getHealth());
         }
 
         void UpdateGUI()
@@ -86,6 +94,11 @@ namespace TerraFirma
             ApplecountWincondition.count = apples;
             //TODO Show victory in UI
             bool PlayerWonWithApples = ApplecountWincondition.CheckWinCondition();
+        }
+
+        public void SetCollectableMaterial(CollectableMaterial _collectable)
+        {
+            collectionController.currentCollectableMaterial = _collectable;
         }
     }
 }
