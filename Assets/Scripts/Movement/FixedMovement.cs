@@ -9,6 +9,10 @@ namespace TerraFirma.Movement
         [SerializeField] private Animator playerAnimator;
         [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private Transform playerGraphics;
+
+        [SerializeField] private float rotationSpeed;
+        private Quaternion _wantedRotation;
+
         private void FixedUpdate()
         {
             Vector3 moveForce = Vector3.zero;
@@ -28,11 +32,17 @@ namespace TerraFirma.Movement
             Rotate(moveForce);
         }
 
+        private void Update()
+        {
+            //playerGraphics.rotation = Quaternion.Lerp(this.transform.rotation, _wantedRotation, Time.deltaTime * rotationSpeed);
+        }
+
         private void Rotate(Vector3 to)
         {
             if (to == Vector3.zero) return;
 
             Quaternion facedirection = Quaternion.LookRotation(to);
+            _wantedRotation = facedirection;
             playerGraphics.rotation = facedirection;
         }
     }

@@ -9,11 +9,7 @@ namespace TerraFirma.InspirationSystem
         [SerializeField] private float tickTimer;
         [SerializeField] private bool singleTime;
 
-        private InspirationResponder _responder
-        {
-            get => _responder;
-            set => _responder = value;
-        }
+        private InspirationResponder _responder;
 
         private void Awake()
         {
@@ -35,8 +31,11 @@ namespace TerraFirma.InspirationSystem
 
         private IEnumerator InspirationModification()
         {
-            yield return new WaitForSeconds(tickTimer);
-            if (_responder != null) _responder.ModifyInspiration(inspirationChange);
+            while (_responder != null)
+            {
+                _responder.ModifyInspiration(inspirationChange);
+                yield return new WaitForSeconds(tickTimer);
+            }
         }
     }
 }

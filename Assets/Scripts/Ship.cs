@@ -6,6 +6,8 @@ namespace TerraFirma
     public class Ship : MonoBehaviour
     {
         [SerializeField] float speed;
+        [SerializeField] float decelerationModifier;
+
 
         private bool anchorIsDown;
 
@@ -19,7 +21,7 @@ namespace TerraFirma
         {
             if (anchorIsDown)
             {
-                speed -= 0.5f * Time.deltaTime;
+                speed -= 0.5f * decelerationModifier * Time.deltaTime;
             }
             if (speed <= 0f)
             {
