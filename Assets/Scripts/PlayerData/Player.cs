@@ -14,6 +14,8 @@ namespace TerraFirma
         public int apples;
         [SerializeField] private UIHealthController uiHealthController;
 
+        [SerializeField] private UICollectibleController uiCollectibleController;
+
         public Apple apple;
         [SerializeField] private int healthInitial;
         //public Text currentHealthLabel;
@@ -27,7 +29,7 @@ namespace TerraFirma
         void Start()
         {
             healthController = new PlayerHealthController(healthInitial);
-            uiHealthController = new UIHealthController(healthInitial);
+            //uiHealthController = new UIHealthController(healthInitial);
             collectionController = new CollectionController();
 
             isDead = false;
@@ -52,8 +54,9 @@ namespace TerraFirma
 
         private void OnGUI()
         {
+            uiHealthController.UpdateHealth(healthController.getHealth());
+            uiCollectibleController.UpdateCollectibles(collectionController.Ice, collectionController.Cream, collectionController.Sugar);
 
-            //uiHealthController.UpdateHealth(healthController.getHealth());
         }
 
         void UpdateGUI()
