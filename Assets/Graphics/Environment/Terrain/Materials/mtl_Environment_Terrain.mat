@@ -56,8 +56,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: dd21cbba5f6d0154c82ce325356602c0, type: 3}
-        m_Scale: {x: 30, y: 30}
+        m_Texture: {fileID: 2800000, guid: 164243526ef470f48995de35050330de, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
@@ -85,5 +85,5 @@ Material:
     - _Color: {r: 0.7000453, g: 0.7735849, b: 0.507209, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Light: {r: 1, g: 1, b: 1, a: 0}
-    - _Shadow: {r: 0.745283, g: 0.745283, b: 0.745283, a: 0}
+    - _Shadow: {r: 0.25832146, g: 0.27166378, b: 0.4056604, a: 0}
   m_BuildTextureStacks: []
