@@ -11,7 +11,6 @@ namespace TerraFirma.UI
 
         public void SetMaxHealth(int health)
         {
-            Debug.Log("toimii");
             slider.maxValue = health;
             slider.value = health;
         }

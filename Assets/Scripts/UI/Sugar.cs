@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-namespace TerraFirma.UI
+namespace TerraFirma
 {
-    public class HealthText : MonoBehaviour
+    public class Sugar : MonoBehaviour
     {
         public TextMeshProUGUI _text;
 
@@ -16,9 +16,10 @@ namespace TerraFirma.UI
 
         }
 
-        public void SetHealth(int health)
+        public void SetAmount(int amount)
         {
-            _text.text = health.ToString();
+
+            _text.text = amount.ToString();
         }
     }
 }

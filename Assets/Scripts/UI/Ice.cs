@@ -6,7 +6,7 @@ using TMPro;
 
 namespace TerraFirma.UI
 {
-    public class HealthText : MonoBehaviour
+    public class Ice : MonoBehaviour
     {
         public TextMeshProUGUI _text;
 
@@ -16,9 +16,10 @@ namespace TerraFirma.UI
 
         }
 
-        public void SetHealth(int health)
+        public void SetAmount(int amount)
         {
-            _text.text = health.ToString();
+
+            _text.text = amount.ToString();
         }
     }
 }
