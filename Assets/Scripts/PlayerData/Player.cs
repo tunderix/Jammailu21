@@ -39,7 +39,7 @@ namespace TerraFirma
             isDead = false;
             SetupWinconditions();
             uiHealthController.setupHealthBar(healthInitial);
-            uiInspirationController.setupInspirationBar(inspirationResponder.InspirationController.CurrentInspiration, inspirationResponder.InspirationController.CurrentInspiration);
+            uiInspirationController.setupInspirationBar(inspirationResponder.InspirationController.CurrentInspiration, inspirationResponder.InspirationController.MaxInspiration);
 
             //updateGUI();
             //WinCondition.count = 0;
@@ -55,7 +55,7 @@ namespace TerraFirma
             }
 
             if (Input.GetKeyDown(KeyCode.R)) collectionController.Gather();
-            if (Input.GetKeyDown(KeyCode.T)) inspirationResponder.ModifyInspiration(-5);
+            if (Input.GetKeyDown(KeyCode.T)) inspirationResponder.ModifyInspiration(-50);
 
         }
 

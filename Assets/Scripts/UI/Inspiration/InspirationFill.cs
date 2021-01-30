@@ -9,17 +9,22 @@ namespace TerraFirma.UI
     public class InspirationFill : MonoBehaviour
     {
         [SerializeField] private Image image;
-        private int maxInspiration;
+        [SerializeField] private int maxInspiration;
+        [SerializeField] private int CurrentInspiration;
         // Start is called before the first frame update
-        public void SetUpInspiration(int initial, int max)
+        public void SetUpInspiration(int current, int max)
         {
+            CurrentInspiration = current;
             maxInspiration = max;
-            image.fillAmount = initial / max;
+
+
+            image.fillAmount = (float)current / (float)max;
+
         }
 
         public void SetInspiration(int value)
         {
-            image.fillAmount = value / maxInspiration;
+            image.fillAmount = (float)value / (float)maxInspiration;
         }
 
     }

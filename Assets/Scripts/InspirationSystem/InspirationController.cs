@@ -12,7 +12,7 @@ namespace TerraFirma.InspirationSystem
 
         public int CurrentInspiration { get => _currentInspiration; }
 
-        public int StartInspiration { get => _maxInspiration; }
+        public int MaxInspiration { get => _maxInspiration; }
 
 
 

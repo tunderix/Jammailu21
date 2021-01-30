@@ -9,7 +9,7 @@ namespace TerraFirma.UI
 {
     public class UIInspirationController : MonoBehaviour
     {
-        [SerializeField] InspirationText inspirationText;
+        //[SerializeField] InspirationText inspirationText;
         [SerializeField] InspirationFill inspirationBar;
 
         // Start is called before the first frame update
@@ -22,7 +22,7 @@ namespace TerraFirma.UI
         public void UpdateInspiration(int value)
         {
             UpdateInspirationBar(value);
-            UpdateInspirationText(value);
+            //UpdateInspirationText(value);
         }
 
         private void UpdateInspirationBar(int value)
