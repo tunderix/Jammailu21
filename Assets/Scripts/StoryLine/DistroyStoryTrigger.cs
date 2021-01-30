@@ -5,7 +5,7 @@ using TMPro;
 
 namespace TerraFirma
 {
-    public class TargetStoryLine : MonoBehaviour
+    public class DistroyStoryTrigger : MonoBehaviour
     {
         [SerializeField] private StoryText storyText;
         [SerializeField] private StoryText storyText2;
@@ -31,6 +31,7 @@ namespace TerraFirma
             {
                 StartCoroutine(ShowSecondText());
             }
+            Destroy(gameObject);
         }
 
         IEnumerator<WaitForSeconds> ShowSecondText()
