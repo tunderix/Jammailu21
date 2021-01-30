@@ -6,20 +6,20 @@ namespace TerraFirma.InspirationSystem
     public class InspirationController
     {
         [SerializeField] private int _currentInspiration;
-        [SerializeField] private int _startInspiration;
+        [SerializeField] private int _maxInspiration;
         [SerializeField] private int inspiredStateRequirement;
         [SerializeField] private bool inspiredState;
 
         public int CurrentInspiration { get => _currentInspiration; }
 
-        public int StartInspiration { get => _startInspiration; }
+        public int StartInspiration { get => _maxInspiration; }
 
 
 
 
-        public InspirationController(int startInspiration)
+        public InspirationController(int startInspiration, int maxInspiration)
         {
-            _startInspiration = startInspiration;
+            _maxInspiration = maxInspiration;
             _currentInspiration = startInspiration;
             inspiredState = false;
         }
@@ -29,7 +29,7 @@ namespace TerraFirma.InspirationSystem
         public void ModifyInspiration(int amount)
         {
             _currentInspiration += amount;
-            _currentInspiration = Mathf.Clamp(_currentInspiration, 0, _startInspiration);
+            _currentInspiration = Mathf.Clamp(_currentInspiration, 0, _maxInspiration);
 
             if (_inspiredStateConditionsMet) LaunchInspiredState();
         }
