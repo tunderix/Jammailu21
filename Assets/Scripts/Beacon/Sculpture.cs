@@ -27,7 +27,6 @@ namespace TerraFirma
             {
                 player.BeaconTriggered = false;
                 ship.AnchorUp();
-                piece1 = true;
             }
         }
     }
