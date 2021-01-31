@@ -7,13 +7,15 @@ namespace TerraFirma
     {
         [SerializeField] float speed;
         [SerializeField] float decelerationModifier;
+        private float maxSpeed;
 
 
-        [SerializeField] private bool anchorIsDown;
+        private bool anchorIsDown;
 
         private void Start()
         {
             anchorIsDown = false;
+            maxSpeed = speed;
         }
 
         private void Update()
@@ -22,9 +24,19 @@ namespace TerraFirma
             {
                 speed -= 0.5f * decelerationModifier * Time.deltaTime;
             }
+            else
+            {
+                speed += 0.5f * decelerationModifier * Time.deltaTime;
+                if (speed > maxSpeed) speed = maxSpeed;
+            }
+
             if (speed <= 0f)
             {
                 speed = 0f;
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    anchorIsDown = false;
+                }
             }
         }
 
@@ -36,11 +48,6 @@ namespace TerraFirma
         public void AnchorDown()
         {
             anchorIsDown = true;
-        }
-
-        public void AnchorUp()
-        {
-            anchorIsDown = false;
         }
     }
 }
