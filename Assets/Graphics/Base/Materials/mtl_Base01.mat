@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: d2f08d2919a5d7341aaf90cf803e8b3a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3d2638513aa6a6042aa8ceea85dcf431, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -70,6 +70,7 @@ Material:
     - _DstBlend: 0
     - _Float0: 0.05
     - _Float1: 0
+    - _Float2: 0.1190259
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -86,6 +87,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Light: {r: 1, g: 0.89110327, b: 0.6556604, a: 0}
+    - _Light: {r: 1, g: 1, b: 1, a: 0}
     - _Shadow: {r: 0.6509434, g: 0.5228391, b: 0.31626025, a: 0}
   m_BuildTextureStacks: []
