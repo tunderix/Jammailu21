@@ -489,7 +489,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 936973e0b0cabb543ac104cc0ffda4ce, type: 3}
   audioData: {fileID: 5336825206647950432}
   volumeSlider: 0.5
---- !u!114 &5553703931056936859
+--- !u!114 &8459011934484002365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -498,11 +498,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2247185180758504152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ca3dcfd141a7b4e9e4a709261c6e58, type: 3}
+  m_Script: {fileID: 11500000, guid: e134ad5ceae80e946bd220abba9dde71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   storyText: {fileID: 11400000, guid: 8f6953287bfc065419e0c044480eb691, type: 2}
-  storyText2: {fileID: 0}
+  storyText2: {fileID: 11400000, guid: c8435547d5de74e4c85cff73c400d39e, type: 2}
   showTime: 5
 --- !u!82 &6484900449061958887
 AudioSource:
@@ -741,7 +741,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 96815851f9f8350418fca0a6d4f93941, type: 3}
   audioData: {fileID: 1790501608817405516}
   volumeSlider: 0.5
---- !u!114 &3670061189536312200
+--- !u!114 &6686041110587063128
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -753,9 +753,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ca3dcfd141a7b4e9e4a709261c6e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyText: {fileID: 11400000, guid: c8435547d5de74e4c85cff73c400d39e, type: 2}
-  storyText2: {fileID: 11400000, guid: 90eac05f516b57747b86ae1c67ed3649, type: 2}
-  showTime: 5
+  storyText: {fileID: 11400000, guid: 2737b245dceebd24bb39695a6462d85b, type: 2}
+  storyText2: {fileID: 0}
+  showTime: 7
 --- !u!82 &8236362894844091686
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: b17fa0612dd40b749abe476e78945030, type: 3}
   audioData: {fileID: 7586210378329940197}
   volumeSlider: 0.5
---- !u!114 &6700829460193806799
+--- !u!114 &6704336876320975698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8958544699406994271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ca3dcfd141a7b4e9e4a709261c6e58, type: 3}
+  m_Script: {fileID: 11500000, guid: e134ad5ceae80e946bd220abba9dde71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   storyText: {fileID: 11400000, guid: a3bf867c80463b840a184d6562690941, type: 2}
