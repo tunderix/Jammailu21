@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mtl_Creambox01 1
+  m_Name: mtl_Item_Creambox01
   m_Shader: {fileID: 4800000, guid: a654f015d437ec84985f85497411d73f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: d2f08d2919a5d7341aaf90cf803e8b3a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7c75f5f8e729eb3419238c574b32a28e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -86,5 +86,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Light: {r: 1, g: 1, b: 1, a: 0}
-    - _Shadow: {r: 0, g: 0, b: 0, a: 0}
+    - _Shadow: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 0}
   m_BuildTextureStacks: []
