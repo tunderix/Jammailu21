@@ -22,7 +22,11 @@ namespace TerraFirma.UI
         public void UpdateInspiration(int value)
         {
             UpdateInspirationBar(value);
-            //UpdateInspirationText(value);
+            if (value > 0)
+            {
+                UpdateInspirationText(value);
+            }
+
         }
 
         private void UpdateInspirationBar(int value)
@@ -32,9 +36,15 @@ namespace TerraFirma.UI
 
         private void UpdateInspirationText(int value)
         {
-
+            GameObject Go = GameObject.Find("descriptionStory");
+            Go.SetActive(true);
+            Go.GetComponent<TextMeshPro>().SetText("“Wow! I feel like I have found my long-lost inspiration finally. I want to start working on my masterpiece right now.”");
+            StartCoroutine(HideText(Go));
         }
-
-
+        IEnumerator<WaitForSeconds> HideText(GameObject Go)
+        {
+            yield return new WaitForSeconds(3);
+            Go.SetActive(false);
+        }
     }
 }
