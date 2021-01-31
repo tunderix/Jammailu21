@@ -9,12 +9,11 @@ namespace TerraFirma
         [SerializeField] float decelerationModifier;
 
 
-        private bool anchorIsDown;
+        [SerializeField] private bool anchorIsDown;
 
         private void Start()
         {
             anchorIsDown = false;
-
         }
 
         private void Update()
@@ -37,6 +36,11 @@ namespace TerraFirma
         public void AnchorDown()
         {
             anchorIsDown = true;
+        }
+
+        public void AnchorUp()
+        {
+            anchorIsDown = false;
         }
     }
 }
