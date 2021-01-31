@@ -12,6 +12,18 @@ ModelImporter:
   - first:
       74: -4686236559480434990
     second: IdleBreath01
+  - first:
+      74: -521177801916170770
+    second: IdleBreath01 (1)
+  - first:
+      74: -6944399154944137228
+    second: CrouchToLift
+  - first:
+      74: 7947532078254172689
+    second: StandToPushButton
+  - first:
+      74: -7177579191635037161
+    second: Faint
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -46,18 +58,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Running01
-      takeName: Running01
+      name: Faint
+      takeName: Faint
       internalID: 0
-      firstFrame: 0
-      lastFrame: 40
+      firstFrame: 735
+      lastFrame: 775
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -73,7 +85,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 445
     - serializedVersion: 16
       name: Walking01
       takeName: Walking01
@@ -187,7 +199,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: biped_PlayerCharacter_Artist01
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

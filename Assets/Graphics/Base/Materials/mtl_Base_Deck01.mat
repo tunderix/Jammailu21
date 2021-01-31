@@ -70,13 +70,14 @@ Material:
     - _DstBlend: 0
     - _Float0: 0.05
     - _Float1: 0
-    - _Float2: 0.823
+    - _Float2: 1
     - _Float3: 5.2
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
+    - _Multiplier: 2
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
@@ -89,5 +90,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Light: {r: 1, g: 1, b: 1, a: 0}
-    - _Shadow: {r: 0.4056604, g: 0.3759126, b: 0.35782307, a: 0}
+    - _Shadow: {r: 0.6320754, g: 0.62909395, b: 0.62909395, a: 0}
   m_BuildTextureStacks: []
