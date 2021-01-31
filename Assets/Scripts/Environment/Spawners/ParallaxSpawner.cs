@@ -25,6 +25,10 @@ namespace TerraFirma.ParallaxMovement
             {
                 spawningEnabled = false;
             }
+            else
+            {
+                spawningEnabled = true;
+            }
         }
 
         private Collider _collider { get => this.GetComponent<Collider>(); }

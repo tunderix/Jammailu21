@@ -49,5 +49,9 @@ namespace TerraFirma
         {
             anchorIsDown = true;
         }
+        public void AnchorUp()
+        {
+            anchorIsDown = false;
+        }
     }
 }
