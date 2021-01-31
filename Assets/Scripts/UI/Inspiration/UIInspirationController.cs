@@ -11,9 +11,6 @@ namespace TerraFirma.UI
     {
         //[SerializeField] InspirationText inspirationText;
         [SerializeField] InspirationFill inspirationBar;
-        /* private TextMeshPro storyComponent;
-        [SerializeField] private StoryText storyText; */
-
 
         // Start is called before the first frame update
 
@@ -24,11 +21,10 @@ namespace TerraFirma.UI
 
         public void UpdateInspiration(int value)
         {
-            Debug.Log(value);
             UpdateInspirationBar(value);
-            /*  if (value >= 1000)
+            /*  if (value > 0)
              {
-                 UpdateInspirationText();
+                 UpdateInspirationText(value);
              } */
 
         }
@@ -38,13 +34,18 @@ namespace TerraFirma.UI
             inspirationBar.SetInspiration(value);
         }
 
-        private void UpdateInspirationText()
+        /* private void UpdateInspirationText(int value)
         {
-            /* TextMeshPro Go = GameObject.Find("descriptionStory").GetComponent<TextMeshPro>();
-            Go.gameObject.SetActive(true);
-            Go.SetText(storyText.description);
-            StartCoroutine(HideText(Go.gameObject)); */
-        }
-
+            GameObject Go = GameObject.Find("descriptionStory");
+            if (Go == null) return;
+            Go.SetActive(true);
+            Go.GetComponent<TextMeshPro>().SetText("“Wow! I feel like I have found my long-lost inspiration finally. I want to start working on my masterpiece right now.”");
+            StartCoroutine(HideText(Go));
+        } */
+        /* IEnumerator<WaitForSeconds> HideText(GameObject Go)
+        {
+            yield return new WaitForSeconds(3);
+            Go.SetActive(false);
+        } */
     }
 }

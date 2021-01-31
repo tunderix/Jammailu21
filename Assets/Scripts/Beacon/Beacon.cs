@@ -22,7 +22,7 @@ namespace TerraFirma
             {
 
                 player.BeaconTriggered = true;
-
+                player.LaunchInspiredState(); // TODO - Should be based on inpiration value
                 hasBeenTriggered = true;
             }
         }

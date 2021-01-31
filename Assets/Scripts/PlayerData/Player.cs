@@ -108,5 +108,10 @@ namespace TerraFirma
         {
             collectionController.currentCollectableMaterial = _collectable;
         }
+
+        public void LaunchInspiredState()
+        {
+            inspirationResponder.InspirationController.LaunchInspiredState(true);
+        }
     }
 }
