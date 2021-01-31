@@ -30,6 +30,8 @@ namespace TerraFirma
         [SerializeField] private CollectionController collectionController;
 
         [SerializeField] private List<WinCondition> winConditions;
+
+        public bool BeaconTriggered;
         public WinCondition ApplecountWincondition;
         void Start()
         {
@@ -67,10 +69,11 @@ namespace TerraFirma
         }
 
 
-        private void GoToDeadScreen()
-        {
-            SceneManager.LoadScene("deadScreen", LoadSceneMode.Additive);
-        }
+
+
+
+
+
 
         public bool TakeDamage(int damageAmount)
         {
