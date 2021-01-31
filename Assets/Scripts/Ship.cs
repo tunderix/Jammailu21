@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.AI;
+using System.Collections.Generic;
 
 namespace TerraFirma
 {
@@ -8,7 +8,7 @@ namespace TerraFirma
         [SerializeField] float speed;
         [SerializeField] float decelerationModifier;
         private float maxSpeed;
-
+        [SerializeField] private IslandSpawner islandSpawner;
 
         private bool anchorIsDown;
 
@@ -52,6 +52,13 @@ namespace TerraFirma
         public void AnchorUp()
         {
             anchorIsDown = false;
+            StartCoroutine(SpawnNextIsland());
+        }
+
+        IEnumerator<WaitForSeconds> SpawnNextIsland()
+        {
+            yield return new WaitForSeconds(20);
+            islandSpawner.InstantiateIsland();
         }
     }
 }
