@@ -57,7 +57,7 @@ namespace TerraFirma
             }
 
             if (Input.GetKeyDown(KeyCode.R)) collectionController.Gather();
-            if (Input.GetKeyDown(KeyCode.T)) inspirationResponder.ModifyInspiration(-50);
+            if (Input.GetKeyDown(KeyCode.T)) inspirationResponder.ModifyInspiration(50);
 
         }
 

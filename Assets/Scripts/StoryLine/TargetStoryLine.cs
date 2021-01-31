@@ -28,6 +28,8 @@ namespace TerraFirma
                 StartCoroutine(HideText());
             }
         }
+
+
         IEnumerator<WaitForSeconds> HideText()
         {
             yield return new WaitForSeconds(showTime);
