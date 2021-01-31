@@ -12,21 +12,21 @@ namespace TerraFirma
         [Range(0.0f, 1.0f)]
         [SerializeField] private float volumeSlider;
 
-        private string volumeSliderLabel = "MUSIC";
-        private GUIContent volumeLabel;
+        //private string volumeSliderLabel = "MUSIC";
+        //private GUIContent volumeLabel;
         private void Start()
         {
             playAudioClip = new PlayAudioClip();
-            volumeSlider = 0.5f;
+            volumeSlider = 0.3f;
             audioData = GetComponent<AudioSource>();
             audioData.Play();
         }
 
         void OnGUI()
         {
-            volumeSlider = GUI.HorizontalSlider(new Rect(25, 25, 200, 60), volumeSlider, 0.0F, 1.0F);
+            //volumeSlider = GUI.HorizontalSlider(new Rect(25, 25, 200, 60), volumeSlider, 0.0F, 1.0F);
             audioData.volume = volumeSlider;
-            GUI.Label(new Rect(30, 5, 200, 60), volumeSliderLabel);
+            //GUI.Label(new Rect(30, 5, 200, 60), volumeSliderLabel);
         }
     }
 }
