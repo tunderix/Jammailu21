@@ -14,7 +14,7 @@ namespace TerraFirma.InspirationSystem
 
         public int MaxInspiration { get => _maxInspiration; }
 
-
+        [SerializeField] private GameObject auraGameObject;
 
 
         public InspirationController(int startInspiration, int maxInspiration)
@@ -31,12 +31,19 @@ namespace TerraFirma.InspirationSystem
             _currentInspiration += amount;
             _currentInspiration = Mathf.Clamp(_currentInspiration, 0, _maxInspiration);
 
-            if (_inspiredStateConditionsMet) LaunchInspiredState();
+            LaunchInspiredState(_inspiredStateConditionsMet);
         }
 
-        private void LaunchInspiredState()
+        public void LaunchInspiredState(bool inspired)
         {
-            inspiredState = true;
+            if (inspired) auraGameObject.SetActive(true);
+
+            inspiredState = inspired;
+        }
+
+        public void LoseInspiredState()
+        {
+            auraGameObject.SetActive(false);
         }
     }
 }

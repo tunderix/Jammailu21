@@ -11,6 +11,7 @@ namespace TerraFirma
         [SerializeField] float decelerationModifier;
         private float maxSpeed;
         [SerializeField] private IslandSpawner islandSpawner;
+        private int islandToSpawnIndex = 0;
 
         //public Text shipText;
         private bool anchorIsDown;
@@ -59,13 +60,14 @@ namespace TerraFirma
         public void AnchorUp()
         {
             anchorIsDown = false;
+            islandToSpawnIndex++;
             StartCoroutine(SpawnNextIsland());
         }
 
         IEnumerator<WaitForSeconds> SpawnNextIsland()
         {
             yield return new WaitForSeconds(20);
-            islandSpawner.InstantiateIsland();
+            islandSpawner.InstantiateIsland(islandToSpawnIndex);
         }
 
         private void UpdateShipText()
@@ -79,6 +81,6 @@ namespace TerraFirma
         {
             yield return new WaitForSeconds(3);
             Go.SetActive(false);
+}
         }
     }
-}
