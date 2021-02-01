@@ -123,8 +123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e134ad5ceae80e946bd220abba9dde71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyText: {fileID: 11400000, guid: 22d449aca2ce87b4c8772e71e1c42792, type: 2}
-  storyText2: {fileID: 0}
+  MoodkillerSlogans:
+  - {fileID: 11400000, guid: a3bf867c80463b840a184d6562690941, type: 2}
+  - {fileID: 11400000, guid: 2ef904b03e7c39b43b2c441d5ce030f6, type: 2}
+  - {fileID: 11400000, guid: 8f6953287bfc065419e0c044480eb691, type: 2}
+  - {fileID: 11400000, guid: c8435547d5de74e4c85cff73c400d39e, type: 2}
   showTime: 3
 --- !u!114 &5712149148146223762
 MonoBehaviour:
@@ -373,8 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e134ad5ceae80e946bd220abba9dde71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyText: {fileID: 11400000, guid: a3bf867c80463b840a184d6562690941, type: 2}
-  storyText2: {fileID: 11400000, guid: 2ef904b03e7c39b43b2c441d5ce030f6, type: 2}
+  MoodkillerSlogans: []
   showTime: 3
 --- !u!114 &7859427129136693295
 MonoBehaviour:
@@ -527,8 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e134ad5ceae80e946bd220abba9dde71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyText: {fileID: 11400000, guid: 8f6953287bfc065419e0c044480eb691, type: 2}
-  storyText2: {fileID: 11400000, guid: c8435547d5de74e4c85cff73c400d39e, type: 2}
+  MoodkillerSlogans: []
   showTime: 3
 --- !u!114 &3612460739744751185
 MonoBehaviour:
@@ -1001,8 +1002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e134ad5ceae80e946bd220abba9dde71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyText: {fileID: 11400000, guid: 8f6953287bfc065419e0c044480eb691, type: 2}
-  storyText2: {fileID: 11400000, guid: c8435547d5de74e4c85cff73c400d39e, type: 2}
+  MoodkillerSlogans: []
   showTime: 3
 --- !u!114 &4944587843933388541
 MonoBehaviour:

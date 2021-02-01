@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1182270845132319693}
   - component: {fileID: 1182270845132319695}
   - component: {fileID: 1182270845132319690}
+  - component: {fileID: 8629125351944131204}
   m_Layer: 0
   m_Name: MoodKiller
   m_TagString: Untagged
@@ -70,6 +71,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 6.91
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8629125351944131204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182270845132319691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e134ad5ceae80e946bd220abba9dde71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoodkillerSlogans:
+  - {fileID: 11400000, guid: a3bf867c80463b840a184d6562690941, type: 2}
+  - {fileID: 11400000, guid: 2ef904b03e7c39b43b2c441d5ce030f6, type: 2}
+  - {fileID: 11400000, guid: 8f6953287bfc065419e0c044480eb691, type: 2}
+  - {fileID: 11400000, guid: c8435547d5de74e4c85cff73c400d39e, type: 2}
+  showTime: 3
 --- !u!1001 &1182270845200437017
 PrefabInstance:
   m_ObjectHideFlags: 0

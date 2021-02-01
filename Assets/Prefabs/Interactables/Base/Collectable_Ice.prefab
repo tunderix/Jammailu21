@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2474036823407879806}
   - component: {fileID: 2474036823407879807}
   - component: {fileID: 2474036823407879792}
+  - component: {fileID: 7705642640464237836}
   m_Layer: 0
   m_Name: Collectable_Ice
   m_TagString: Untagged
@@ -72,6 +73,21 @@ MonoBehaviour:
   ingredientType: 0
   minCount: 1
   maxCount: 3
+--- !u!114 &7705642640464237836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2474036823407879793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ca3dcfd141a7b4e9e4a709261c6e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyText: {fileID: 11400000, guid: 2b382f4da5c3a6143bec1c1ccfec1863, type: 2}
+  storyText2: {fileID: 0}
+  showTime: 4
 --- !u!1 &2474036825178876472
 GameObject:
   m_ObjectHideFlags: 0
