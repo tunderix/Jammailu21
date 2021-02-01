@@ -16,7 +16,7 @@ namespace TerraFirma
         //private GUIContent volumeLabel;
         private void Start()
         {
-            playAudioClip = new PlayAudioClip();
+            //playAudioClip = new PlayAudioClip();
             volumeSlider = 0.3f;
             audioData = GetComponent<AudioSource>();
             audioData.Play();

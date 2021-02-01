@@ -12,8 +12,6 @@ namespace TerraFirma
         private float maxSpeed;
         [SerializeField] private IslandSpawner islandSpawner;
         private int islandToSpawnIndex = 0;
-
-        //public Text shipText;
         private bool anchorIsDown;
 
         private void Start()
@@ -52,10 +50,10 @@ namespace TerraFirma
         public void AnchorDown()
         {
             anchorIsDown = true;
-            if (anchorIsDown == true)
-            {
-                UpdateShipText();
-            }
+            /*             if (anchorIsDown == true)
+                        {
+                            UpdateShipText();
+                        } */
         }
         public void AnchorUp()
         {
@@ -70,17 +68,19 @@ namespace TerraFirma
             islandSpawner.InstantiateIsland(islandToSpawnIndex);
         }
 
-        private void UpdateShipText()
-        {
-            GameObject Go = GameObject.Find("descriptionStory");
-            Go.SetActive(true);
-            Go.GetComponent<TextMeshPro>().SetText("“What is happening!? My ship is stopping. I need to find some fuel... and fast! I need to get the old boy running again. Perhaps there is something nearby that I could harvest.”");
-            StartCoroutine(HideText(Go));
-        }
-        IEnumerator<WaitForSeconds> HideText(GameObject Go)
-        {
-            yield return new WaitForSeconds(3);
-            Go.SetActive(false);
-}
-        }
+        //ADD THIS WHEN FUEL IS OUT SCRIPT IS DONE
+        /*         private void UpdateShipText()
+                {
+                    GameObject Go = GameObject.Find("descriptionStory");
+                    Go.SetActive(true);
+                    Go.GetComponent<TextMeshPro>().SetText("“What is happening!? My ship is stopping. I need to find some fuel... and fast! I need to get the old boy running again. Perhaps there is something nearby that I could harvest.”");
+                    StartCoroutine(HideText(Go));
+                }
+                IEnumerator<WaitForSeconds> HideText(GameObject Go)
+                {
+                    yield return new WaitForSeconds(3);
+                    Go.SetActive(false);
+
+                } */
     }
+}

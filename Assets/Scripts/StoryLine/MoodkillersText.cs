@@ -23,6 +23,7 @@ namespace TerraFirma
             Player player = other.GetComponent<Player>();
             if (player != null)
             {
+                if (storyComponent == null) return;
                 storyComponent.gameObject.SetActive(true);
                 storyComponent.SetText(storyText.description);
                 StartCoroutine(HideText());

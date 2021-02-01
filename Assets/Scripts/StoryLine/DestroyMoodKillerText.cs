@@ -5,7 +5,7 @@ using TMPro;
 
 namespace TerraFirma
 {
-    public class DistroyStoryTrigger : MonoBehaviour
+    public class DestroyMoodKillerText : MonoBehaviour
     {
         [SerializeField] private StoryText storyText;
         [SerializeField] private StoryText storyText2;
@@ -15,7 +15,7 @@ namespace TerraFirma
 
         private void Awake()
         {
-            storyComponent = GameObject.Find("descriptionStory").GetComponent<TextMeshPro>();
+            storyComponent = GameObject.Find("moodkillersText").GetComponent<TextMeshPro>();
         }
 
         private void OnTriggerEnter(Collider other)

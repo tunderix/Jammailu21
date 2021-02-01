@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: StoryH
   m_EditorClassIdentifier: 
   name: MoodKiller4
-  description: "\u201CYou are running out of time.\u201D"
+  description: "\u201CYou are running out of good mood.\u201D"

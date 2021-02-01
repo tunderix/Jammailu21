@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: StoryA
   m_EditorClassIdentifier: 
   name: Beginning
-  description: "\u201CAargh! You suck... YOU suck, yousuck, yousuck, yousuck, you
-    S-U-C-K!!! I am no-good worthless piece of crappy artist wannabe! I am never
-    going to finish in time...\u201D  "
+  description: 'Aargh! You suck... YOU suck, yousuck, yousuck, you S-U-C-K!!!  '

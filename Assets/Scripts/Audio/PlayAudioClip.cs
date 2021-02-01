@@ -10,8 +10,8 @@ namespace TerraFirma
         public AudioClip clip;
         [SerializeField] private AudioSource audioData;
 
-        [Range(0.0f, 1.0f)]
-        [SerializeField] private float volumeSlider = 1.0f;
+        /*         [Range(0.0f, 1.0f)]
+                [SerializeField] private float volumeSlider; */
 
         private void OnTriggerEnter(Collider other)
         {
@@ -25,6 +25,7 @@ namespace TerraFirma
         void playClip()
         {
             AudioSource.PlayClipAtPoint(clip, transform.position);
+            //volumeSlider = 1.0F;
         }
 
         /*         void OnGUI()

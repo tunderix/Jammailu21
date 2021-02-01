@@ -2353,8 +2353,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _FaceTex:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 1, y: 1.87}
+        m_Offset: {x: 0.54, y: 0.57}
     - _MainTex:
         m_Texture: {fileID: -6109500266666981112}
         m_Scale: {x: 1, y: 1}
@@ -2376,8 +2376,8 @@ Material:
     - _CullMode: 0
     - _Diffuse: 0.5
     - _FaceDilate: 0
-    - _FaceUVSpeedX: 0
-    - _FaceUVSpeedY: 0
+    - _FaceUVSpeedX: 0.78
+    - _FaceUVSpeedY: 1.23
     - _GlowInner: 0.05
     - _GlowOffset: 0.31
     - _GlowOuter: 0.33

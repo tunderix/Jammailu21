@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: StoryK
   m_EditorClassIdentifier: 
   name: Beacon
-  description: "\u201CCool looking place. I feel like inspiration could strike at
-    any moment.\u201D"
+  description: "\u201CI feel like inspiration could strike at any moment.\u201D"
