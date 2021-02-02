@@ -16,6 +16,9 @@ namespace TerraFirma
         {
             storyComponent = GameObject.Find("moodkillersText").gameObject.GetComponent<TextMeshPro>();
             MoodkillerSlogans = new List<StoryText>(10);
+            // TODO maybe add - MoodkillerSlogans.Add(new StoryText("asdjofnasdf")); and add constructor
+            // OR
+            // change moodkiller slogans to List<string>. and in here add manually the texts.
         }
 
         private void OnTriggerEnter(Collider other)
