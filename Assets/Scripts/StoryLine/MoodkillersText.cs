@@ -7,37 +7,39 @@ namespace TerraFirma
 {
     public class MoodkillersText : MonoBehaviour
     {
-        public List<StoryText> MoodkillerSlogans;
+        public List<StoryText> MoodkillerSlogans = new List<StoryText>(5);
         private StoryText storyText;
         private TextMeshPro storyComponent;
         [SerializeField] private float showTime;
 
-        private void Awake()
+        private void Start()
         {
-            storyComponent = GameObject.Find("moodkillersText").gameObject.GetComponent<TextMeshPro>();
-            MoodkillerSlogans = new List<StoryText>(10);
-            // TODO maybe add - MoodkillerSlogans.Add(new StoryText("asdjofnasdf")); and add constructor
-            // OR
-            // change moodkiller slogans to List<string>. and in here add manually the texts.
+            GameObject MoodkillerGameObject = GameObject.Find("moodkillersText");
+            if (MoodkillerGameObject != null)
+            {
+                storyComponent = MoodkillerGameObject.GetComponent<TextMeshPro>();
+            }
         }
 
         private void OnTriggerEnter(Collider other)
         {
             Player player = other.GetComponent<Player>();
-            if (player != null && MoodkillerSlogans.Count > 0)
+            if (player != null)
             {
-                if (storyComponent == null) return;
-                StoryText storyText = MoodkillerSlogans[Random.Range(0, MoodkillerSlogans.Count)];
-                storyComponent.gameObject.SetActive(true);
-                storyComponent.SetText(storyText.description);
-                StartCoroutine(HideText());
+                StoryText storyText = MoodkillerSlogans[Random.Range(1, MoodkillerSlogans.Count)];
+                if (storyComponent != null)
+                {
+                    storyComponent.gameObject.SetActive(true);
+                    storyComponent.SetText(storyText.description);
+                    StartCoroutine(HideText());
+                }
             }
         }
 
         IEnumerator<WaitForSeconds> HideText()
         {
             yield return new WaitForSeconds(showTime);
-            storyComponent.gameObject.SetActive(false);
+            if (storyComponent != null) storyComponent.gameObject.SetActive(false);
         }
 
     }

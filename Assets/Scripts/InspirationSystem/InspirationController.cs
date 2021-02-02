@@ -16,7 +16,6 @@ namespace TerraFirma.InspirationSystem
 
         [SerializeField] private GameObject auraGameObject;
 
-
         public InspirationController(int startInspiration, int maxInspiration)
         {
             _maxInspiration = maxInspiration;

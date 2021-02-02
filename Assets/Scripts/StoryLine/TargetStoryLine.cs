@@ -58,6 +58,5 @@ namespace TerraFirma
 
             if (storyComponent != null) storyComponent.gameObject.SetActive(false);
         }
-
     }
 }
