@@ -9,6 +9,10 @@ namespace TerraFirma
         public bool piece1;
         [SerializeField] private Ship ship;
 
+        [SerializeField] private GameObject sculpturePiece1Reference;
+        [SerializeField] private GameObject sculpturePiece2Reference;
+        [SerializeField] private GameObject sculpturePiece3Reference;
+
         private void Start()
         {
             piece1 = false;

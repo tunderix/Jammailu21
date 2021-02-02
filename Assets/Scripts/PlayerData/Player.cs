@@ -113,5 +113,10 @@ namespace TerraFirma
         {
             inspirationResponder.InspirationController.LaunchInspiredState(true);
         }
+
+        public void AddCloud()
+        {
+            collectionController.clouds++;
+        }
     }
 }

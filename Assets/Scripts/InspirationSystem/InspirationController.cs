@@ -36,7 +36,7 @@ namespace TerraFirma.InspirationSystem
 
         public void LaunchInspiredState(bool inspired)
         {
-            if (inspired) auraGameObject.SetActive(true);
+            if (inspired && auraGameObject != null) auraGameObject.SetActive(true);
 
             inspiredState = inspired;
         }

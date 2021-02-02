@@ -12,6 +12,8 @@ namespace TerraFirma.Collection
         [SerializeField] private int _cream;
         [SerializeField] private int _sugar;
 
+        public int clouds;
+
         public CollectionController()
         {
 
