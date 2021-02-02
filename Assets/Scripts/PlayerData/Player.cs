@@ -31,7 +31,10 @@ namespace TerraFirma
 
         [SerializeField] private List<WinCondition> winConditions;
 
-        public bool BeaconTriggered;
+        public bool Beacon1Triggered;
+        public bool Beacon2Triggered;
+        public bool Beacon3Triggered;
+
         public WinCondition ApplecountWincondition;
         void Start()
         {
@@ -42,6 +45,10 @@ namespace TerraFirma
             SetupWinconditions();
             uiHealthController.setupHealthBar(healthInitial);
             uiInspirationController.setupInspirationBar(inspirationResponder.InspirationController.CurrentInspiration, inspirationResponder.InspirationController.MaxInspiration);
+
+            Beacon1Triggered = false;
+            Beacon2Triggered = false;
+            Beacon3Triggered = false;
 
             //updateGUI();
             //WinCondition.count = 0;

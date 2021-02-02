@@ -8,6 +8,7 @@ namespace TerraFirma
     {
 
         [SerializeField] private bool hasBeenTriggered;
+        [SerializeField] private int beaconIndex;
 
         private void Start()
         {
@@ -18,10 +19,11 @@ namespace TerraFirma
             Player player = other.GetComponent<Player>();
             if (player == null) return;
 
-            if (!hasBeenTriggered)
+            if (!hasBeenTriggered && beaconIndex != 0)
             {
-
-                player.BeaconTriggered = true;
+                if (beaconIndex == 1) player.Beacon1Triggered = true;
+                if (beaconIndex == 2) player.Beacon2Triggered = true;
+                if (beaconIndex == 3) player.Beacon3Triggered = true;
                 player.LaunchInspiredState(); // TODO - Should be based on inpiration value
                 hasBeenTriggered = true;
             }

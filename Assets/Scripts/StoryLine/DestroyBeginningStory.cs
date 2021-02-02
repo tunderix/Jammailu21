@@ -52,9 +52,12 @@ namespace TerraFirma
             storyComponent.gameObject.SetActive(true);
             yield return new WaitForSeconds(showTime);
             storyComponent.gameObject.SetActive(false);
-            if (storyText3 != null)
+
+            GameObject whiteTextGameObject = GameObject.Find("StoryTextWhite");
+
+            if (storyText3 != null && whiteTextGameObject != null)
             {
-                storyComponent = GameObject.Find("StoryTextWhite").GetComponent<TextMeshPro>();
+                storyComponent = whiteTextGameObject.GetComponent<TextMeshPro>();
                 StartCoroutine(ShowThirdText());
             }
             else

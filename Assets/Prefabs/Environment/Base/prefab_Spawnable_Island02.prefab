@@ -1823,6 +1823,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3901178876667440110}
     m_Modifications:
+    - target: {fileID: 1364220596581990192, guid: 989c915ed204c874ba47b3b6bd5ba758, type: 3}
+      propertyPath: beaconIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1364220596581990194, guid: 989c915ed204c874ba47b3b6bd5ba758, type: 3}
       propertyPath: m_RootOrder
       value: 10

@@ -7,7 +7,7 @@ namespace TerraFirma
 {
     public class MoodkillersText : MonoBehaviour
     {
-        public List<StoryText> MoodkillerSlogans = new List<StoryText>();
+        public List<StoryText> MoodkillerSlogans;
         private StoryText storyText;
         private TextMeshPro storyComponent;
         [SerializeField] private float showTime;
@@ -15,12 +15,13 @@ namespace TerraFirma
         private void Awake()
         {
             storyComponent = GameObject.Find("moodkillersText").gameObject.GetComponent<TextMeshPro>();
+            MoodkillerSlogans = new List<StoryText>(10);
         }
 
         private void OnTriggerEnter(Collider other)
         {
             Player player = other.GetComponent<Player>();
-            if (player != null)
+            if (player != null && MoodkillerSlogans.Count > 0)
             {
                 if (storyComponent == null) return;
                 StoryText storyText = MoodkillerSlogans[Random.Range(0, MoodkillerSlogans.Count)];

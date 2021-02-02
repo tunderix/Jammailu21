@@ -7,6 +7,9 @@ namespace TerraFirma
     public class Sculpture : MonoBehaviour
     {
         public bool piece1;
+        public bool piece2;
+        public bool piece3;
+
         [SerializeField] private Ship ship;
 
         [SerializeField] private GameObject sculpturePiece1Reference;
@@ -16,22 +19,28 @@ namespace TerraFirma
         private void Start()
         {
             piece1 = false;
+            piece2 = false;
+            piece3 = false;
         }
+
         private void OnTriggerEnter(Collider other)
         {
             Player player = other.GetComponent<Player>();
             if (player == null) return;
 
-            AddPiece(player);
+            CompareBeaconPieces(piece1, player.Beacon1Triggered, sculpturePiece1Reference);
+            CompareBeaconPieces(piece2, player.Beacon2Triggered, sculpturePiece2Reference);
+            CompareBeaconPieces(piece3, player.Beacon3Triggered, sculpturePiece3Reference);
         }
 
-        public void AddPiece(Player player)
+        private void CompareBeaconPieces(bool i, bool j, GameObject go)
         {
-            if (!piece1)
+            if (i != j)
             {
-                player.BeaconTriggered = false;
+                i = j;
                 ship.AnchorUp();
             }
+            go.SetActive(i);
         }
     }
 }
