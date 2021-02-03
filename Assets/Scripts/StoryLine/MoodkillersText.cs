@@ -24,7 +24,6 @@ namespace TerraFirma
         private void OnTriggerEnter(Collider other)
         {
             Player player = other.GetComponent<Player>();
-            player.DTrigger();
             if (player != null)
             {
                 storyText = MoodkillerSlogans[Random.Range(1, MoodkillerSlogans.Count)];
@@ -33,10 +32,6 @@ namespace TerraFirma
                     storyComponent.gameObject.GetComponent<Renderer>().enabled = true;
                     storyComponent.SetText(storyText.description);
                     StartCoroutine(HideText());
-                }
-                else
-                {
-                    player.DTrigger();
                 }
             }
         }

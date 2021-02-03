@@ -13,9 +13,13 @@ namespace TerraFirma
 
         [SerializeField] private float showTime;
 
-        private void Awake()
+        private void Start()
         {
-            storyComponent = GameObject.Find("descriptionStory").GetComponent<TextMeshPro>();
+            GameObject descrGameObject = GameObject.Find("descriptionStory");
+            if (descrGameObject != null)
+            {
+                storyComponent = descrGameObject.GetComponent<TextMeshPro>();
+            }
         }
 
         private void OnTriggerEnter(Collider other)
@@ -23,7 +27,7 @@ namespace TerraFirma
             Player player = other.GetComponent<Player>();
             if (player != null)
             {
-                storyComponent.gameObject.SetActive(true);
+                storyComponent.gameObject.GetComponent<Renderer>().enabled = true;
                 storyComponent.SetText(storyText.description);
                 StartCoroutine(HideText());
             }
@@ -31,7 +35,7 @@ namespace TerraFirma
         IEnumerator<WaitForSeconds> HideText()
         {
             yield return new WaitForSeconds(showTime);
-            storyComponent.gameObject.SetActive(false);
+            if (storyComponent != null) storyComponent.gameObject.GetComponent<Renderer>().enabled = false;
             if (storyText2 != null)
             {
                 StartCoroutine(ShowSecondText());
@@ -45,9 +49,9 @@ namespace TerraFirma
         IEnumerator<WaitForSeconds> ShowSecondText()
         {
             storyComponent.SetText(storyText2.description);
-            storyComponent.gameObject.SetActive(true);
+            storyComponent.gameObject.GetComponent<Renderer>().enabled = true;
             yield return new WaitForSeconds(showTime);
-            storyComponent.gameObject.SetActive(false);
+            if (storyComponent != null) storyComponent.gameObject.GetComponent<Renderer>().enabled = false;
             Destroy(this.gameObject);
         }
 

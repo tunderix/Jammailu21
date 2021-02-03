@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 3337855730981299562}
   - component: {fileID: 3337855730981299573}
   - component: {fileID: 3337855730981299572}
-  - component: {fileID: 8500477826781909942}
+  - component: {fileID: 6140116922875161910}
   m_Layer: 0
   m_Name: Collectable_Cream
   m_TagString: Untagged
@@ -355,7 +355,7 @@ MonoBehaviour:
   ingredientType: 1
   minCount: 1
   maxCount: 5
---- !u!114 &8500477826781909942
+--- !u!114 &6140116922875161910
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,9 +367,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ca3dcfd141a7b4e9e4a709261c6e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyText: {fileID: 11400000, guid: fbe682d336b06ac4081682d729431831, type: 2}
-  storyText2: {fileID: 0}
-  showTime: 4
+  materialSlogans:
+  - {fileID: 11400000, guid: fbe682d336b06ac4081682d729431831, type: 2}
+  - {fileID: 11400000, guid: 863645fdf0cf01b48b034f3ef30470a6, type: 2}
+  - {fileID: 11400000, guid: ddb2ad4c0893353499029e37c2e18fc1, type: 2}
+  showTime: 2
 --- !u!1 &9043119490896967891
 GameObject:
   m_ObjectHideFlags: 0

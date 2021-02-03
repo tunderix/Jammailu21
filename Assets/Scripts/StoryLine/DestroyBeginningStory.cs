@@ -26,7 +26,7 @@ namespace TerraFirma
             if (player != null)
             {
                 storyComponent = GameObject.Find("StoryTextBlack").GetComponent<TextMeshPro>();
-                storyComponent.gameObject.SetActive(true);
+                storyComponent.gameObject.GetComponent<Renderer>().enabled = true;
                 storyComponent.SetText(storyText.description);
                 StartCoroutine(HideText());
             }
@@ -34,7 +34,7 @@ namespace TerraFirma
         IEnumerator<WaitForSeconds> HideText()
         {
             yield return new WaitForSeconds(showTime);
-            storyComponent.gameObject.SetActive(false);
+            if (storyComponent != null) storyComponent.gameObject.GetComponent<Renderer>().enabled = false;
             if (storyText2 != null)
             {
                 StartCoroutine(ShowSecondText());
@@ -49,9 +49,9 @@ namespace TerraFirma
         IEnumerator<WaitForSeconds> ShowSecondText()
         {
             storyComponent.SetText(storyText2.description);
-            storyComponent.gameObject.SetActive(true);
+            storyComponent.gameObject.GetComponent<Renderer>().enabled = true;
             yield return new WaitForSeconds(showTime);
-            storyComponent.gameObject.SetActive(false);
+            if (storyComponent != null) storyComponent.gameObject.GetComponent<Renderer>().enabled = false;
 
             GameObject whiteTextGameObject = GameObject.Find("StoryTextWhite");
 
@@ -69,9 +69,9 @@ namespace TerraFirma
         IEnumerator<WaitForSeconds> ShowThirdText()
         {
             storyComponent.SetText(storyText3.description);
-            storyComponent.gameObject.SetActive(true);
-            yield return new WaitForSeconds(7);
-            storyComponent.gameObject.SetActive(false);
+            storyComponent.gameObject.GetComponent<Renderer>().enabled = true;
+            yield return new WaitForSeconds(5);
+            if (storyComponent != null) storyComponent.gameObject.GetComponent<Renderer>().enabled = false;
             if (storyText4 != null)
             {
                 StartCoroutine(ShowFourthText());
@@ -86,8 +86,8 @@ namespace TerraFirma
         IEnumerator<WaitForSeconds> ShowFourthText()
         {
             storyComponent.SetText(storyText4.description);
-            storyComponent.gameObject.SetActive(true);
-            yield return new WaitForSeconds(7);
+            storyComponent.gameObject.GetComponent<Renderer>().enabled = true;
+            yield return new WaitForSeconds(5);
             storyComponent.gameObject.SetActive(false);
             Destroy(this.gameObject);
         }

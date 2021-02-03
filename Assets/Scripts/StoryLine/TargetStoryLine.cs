@@ -7,8 +7,8 @@ namespace TerraFirma
 {
     public class TargetStoryLine : MonoBehaviour
     {
-        [SerializeField] private StoryText storyText;
-        [SerializeField] private StoryText storyText2;
+        public List<StoryText> materialSlogans = new List<StoryText>(3);
+        private StoryText storyText;
         private TextMeshPro storyComponent;
 
         [SerializeField] private float showTime;
@@ -25,38 +25,21 @@ namespace TerraFirma
         private void OnTriggerEnter(Collider other)
         {
             Player player = other.GetComponent<Player>();
-            if (player != null && storyComponent != null)
+            if (player != null)
             {
-                storyComponent.gameObject.SetActive(true);
-                storyComponent.SetText(storyText.description);
-                StartCoroutine(HideText());
+                storyText = materialSlogans[Random.Range(1, materialSlogans.Count)];
+                if (storyComponent != null)
+                {
+                    storyComponent.gameObject.GetComponent<Renderer>().enabled = true;
+                    storyComponent.SetText(storyText.description);
+                    StartCoroutine(HideText());
+                }
             }
         }
-
-
         IEnumerator<WaitForSeconds> HideText()
         {
             yield return new WaitForSeconds(showTime);
-
-            if (storyComponent != null) storyComponent.gameObject.SetActive(false);
-
-            if (storyText2 != null)
-            {
-                StartCoroutine(ShowSecondText());
-            }
-        }
-
-        IEnumerator<WaitForSeconds> ShowSecondText()
-        {
-            if (storyComponent != null)
-            {
-                storyComponent.SetText(storyText2.description);
-                storyComponent.gameObject.SetActive(true);
-            }
-
-            yield return new WaitForSeconds(showTime);
-
-            if (storyComponent != null) storyComponent.gameObject.SetActive(false);
+            if (storyComponent != null) storyComponent.gameObject.GetComponent<Renderer>().enabled = false;
         }
     }
 }

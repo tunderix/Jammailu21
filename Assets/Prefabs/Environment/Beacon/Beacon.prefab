@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1364220596581990194}
   - component: {fileID: 1364220596581990193}
-  - component: {fileID: 940873314604771157}
   - component: {fileID: 326518389070660732}
+  - component: {fileID: 7817503844685965177}
   m_Layer: 0
   m_Name: Beacon
   m_TagString: Untagged
@@ -48,21 +48,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 21.7, y: 12.92, z: 15.5}
   m_Center: {x: 0, y: 5.14, z: 0}
---- !u!114 &940873314604771157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364220596581990207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ca3dcfd141a7b4e9e4a709261c6e58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  storyText: {fileID: 11400000, guid: 80b1027cebba73249966b180f82347bb, type: 2}
-  storyText2: {fileID: 0}
-  showTime: 5
 --- !u!114 &326518389070660732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +62,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenTriggered: 0
   beaconIndex: 0
+--- !u!114 &7817503844685965177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364220596581990207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ca3dcfd141a7b4e9e4a709261c6e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialSlogans:
+  - {fileID: 11400000, guid: 80b1027cebba73249966b180f82347bb, type: 2}
+  - {fileID: 11400000, guid: 0dfe9e514fb2e0249ad8df80ac7d53d8, type: 2}
+  - {fileID: 11400000, guid: 80b1027cebba73249966b180f82347bb, type: 2}
+  showTime: 5
 --- !u!1 &1364220597236588903
 GameObject:
   m_ObjectHideFlags: 0

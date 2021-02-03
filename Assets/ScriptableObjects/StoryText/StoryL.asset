@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78a8549cee21934ca27671005759c4d, type: 3}
   m_Name: StoryL
   m_EditorClassIdentifier: 
-  name: InspirationAura
-  description: "\u201CWow! I feel like I have found my long-lost inspiration finally.
-    I want to start working on my masterpiece right now.\u201D "
+  name: Cream
+  description: Whippy Cream! Yummy!

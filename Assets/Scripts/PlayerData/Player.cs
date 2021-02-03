@@ -39,10 +39,8 @@ namespace TerraFirma
 
         public WinCondition ApplecountWincondition;
 
-        [SerializeField] private int dTriggerCount;
         void Start()
         {
-            dTriggerCount = 0;
             healthController = new PlayerHealthController(healthInitial);
             collectionController = new CollectionController();
 
@@ -59,11 +57,6 @@ namespace TerraFirma
             //WinCondition.count = 0;
             //WinCondition.winText.text = "";
             //WinCondition.SetCountText ();
-        }
-
-        public void DTrigger()
-        {
-            dTriggerCount++;
         }
 
         private void Update()

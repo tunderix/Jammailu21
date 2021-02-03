@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a78a8549cee21934ca27671005759c4d, type: 3}
-  m_Name: StoryY
+  m_Name: BlackStartB
   m_EditorClassIdentifier: 
-  name: Conflict2
-  description: And I can stop living off my parents and mom will stop pushing me
-    to law school...YACK!
+  name: BeginningB
+  description: ' I am no-good worthless piece of crappy artist wannabe!'
