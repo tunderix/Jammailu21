@@ -25,6 +25,8 @@ namespace TerraFirma
             if (i == 3) prefabToSpawn = islandPrefab3;
 
             GameObject newGameobject = GameObject.Instantiate(prefabToSpawn, this.transform.position, Quaternion.identity);
+
         }
+
     }
 }

@@ -28,9 +28,16 @@ namespace TerraFirma
             Player player = other.GetComponent<Player>();
             if (player == null) return;
 
-            CompareBeaconPieces(piece1, player.Beacon1Triggered, sculpturePiece1Reference);
-            CompareBeaconPieces(piece2, player.Beacon2Triggered, sculpturePiece2Reference);
-            CompareBeaconPieces(piece3, player.Beacon3Triggered, sculpturePiece3Reference);
+            if (player.collectionController.Ice >= 2 && player.collectionController.Sugar >= 2 && player.collectionController.Cream >= 2)
+            {
+                CompareBeaconPieces(piece1, player.Beacon1Triggered, sculpturePiece1Reference);
+                CompareBeaconPieces(piece2, player.Beacon2Triggered, sculpturePiece2Reference);
+                CompareBeaconPieces(piece3, player.Beacon3Triggered, sculpturePiece3Reference);
+
+                player.collectionController.DrainAll(2);
+            }
+
+
         }
 
         private void CompareBeaconPieces(bool i, bool j, GameObject go)

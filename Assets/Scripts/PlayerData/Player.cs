@@ -27,17 +27,22 @@ namespace TerraFirma
         //public Image deadScreen;
         [SerializeField] private bool isDead;
 
-        [SerializeField] private CollectionController collectionController;
+        public CollectionController collectionController;
 
         [SerializeField] private List<WinCondition> winConditions;
+
+
 
         public bool Beacon1Triggered;
         public bool Beacon2Triggered;
         public bool Beacon3Triggered;
 
         public WinCondition ApplecountWincondition;
+
+        [SerializeField] private int dTriggerCount;
         void Start()
         {
+            dTriggerCount = 0;
             healthController = new PlayerHealthController(healthInitial);
             collectionController = new CollectionController();
 
@@ -54,6 +59,11 @@ namespace TerraFirma
             //WinCondition.count = 0;
             //WinCondition.winText.text = "";
             //WinCondition.SetCountText ();
+        }
+
+        public void DTrigger()
+        {
+            dTriggerCount++;
         }
 
         private void Update()

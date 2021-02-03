@@ -49,5 +49,27 @@ namespace TerraFirma.Collection
 
             return true;
         }
+
+        public void setIce(int value)
+        {
+            _ice = value;
+        }
+
+        public void setCream(int value)
+        {
+            _cream = value;
+        }
+
+        public void setSugar(int value)
+        {
+            _sugar = value;
+        }
+
+        public void DrainAll(int amount)
+        {
+            _cream -= amount;
+            _ice -= amount;
+            _sugar -= amount;
+        }
     }
 }

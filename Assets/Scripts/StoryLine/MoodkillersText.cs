@@ -24,14 +24,19 @@ namespace TerraFirma
         private void OnTriggerEnter(Collider other)
         {
             Player player = other.GetComponent<Player>();
+            player.DTrigger();
             if (player != null)
             {
-                StoryText storyText = MoodkillerSlogans[Random.Range(1, MoodkillerSlogans.Count)];
+                storyText = MoodkillerSlogans[Random.Range(1, MoodkillerSlogans.Count)];
                 if (storyComponent != null)
                 {
-                    storyComponent.gameObject.SetActive(true);
+                    storyComponent.gameObject.GetComponent<Renderer>().enabled = true;
                     storyComponent.SetText(storyText.description);
                     StartCoroutine(HideText());
+                }
+                else
+                {
+                    player.DTrigger();
                 }
             }
         }
@@ -39,7 +44,7 @@ namespace TerraFirma
         IEnumerator<WaitForSeconds> HideText()
         {
             yield return new WaitForSeconds(showTime);
-            if (storyComponent != null) storyComponent.gameObject.SetActive(false);
+            if (storyComponent != null) storyComponent.gameObject.GetComponent<Renderer>().enabled = false;
         }
 
     }
