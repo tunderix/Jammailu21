@@ -83,7 +83,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     motionNodeName: biped_PlayerCharacter_Artist01
     rigImportErrors: 
     rigImportWarnings: 
@@ -93,78 +93,75 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
-    extraExposedTransformPaths: []
+    extraExposedTransformPaths:
+    - biped_PlayerCharacter_Artist01/biped_PlayerCharacter_Base01 Pelvis/biped_PlayerCharacter_Base01
+      R Thigh/biped_PlayerCharacter_Base01 R Calf/biped_PlayerCharacter_Base01 R
+      Foot/biped_PlayerCharacter_Base01 R Toe0
+    - biped_PlayerCharacter_Artist01/biped_PlayerCharacter_Base01 Pelvis/biped_PlayerCharacter_Base01
+      L Thigh/biped_PlayerCharacter_Base01 L Calf/biped_PlayerCharacter_Base01 L
+      Foot/biped_PlayerCharacter_Base01 L Toe0
+    - biped_PlayerCharacter_Artist01/biped_PlayerCharacter_Base01 Pelvis/biped_PlayerCharacter_Base01
+      Spine/biped_PlayerCharacter_Base01 L Thigh/biped_PlayerCharacter_Base01 L Calf/biped_PlayerCharacter_Base01
+      L Foot/biped_PlayerCharacter_Base01 L Toe0
+    - biped_PlayerCharacter_Artist01/biped_PlayerCharacter_Base01 Pelvis/biped_PlayerCharacter_Base01
+      Spine/biped_PlayerCharacter_Base01 R Thigh/biped_PlayerCharacter_Base01 R Calf/biped_PlayerCharacter_Base01
+      R Foot/biped_PlayerCharacter_Base01 R Toe0
     extraUserProperties: []
     clipAnimations:
-    - serializedVersion: 16
-      name: Faint
-      takeName: Faint
-      internalID: 0
-      firstFrame: 735
-      lastFrame: 775
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 445
-    - serializedVersion: 16
-      name: Walking01
-      takeName: Walking01
-      internalID: 0
-      firstFrame: 90
-      lastFrame: 169
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 90
     - serializedVersion: 16
       name: Running01
       takeName: Running01
       internalID: 0
       firstFrame: 0
-      lastFrame: 40
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0
+        functionName: FootStepEvent
+        data: Right
+        objectReferenceParameter: {fileID: 2860892294915939686, guid: 65331530bc6424d4c83e6bcf196648d3, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5012407
+        functionName: FootStepEvent
+        data: Left
+        objectReferenceParameter: {fileID: 2860892294915939686, guid: 65331530bc6424d4c83e6bcf196648d3, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walking01
+      takeName: Walking01
+      internalID: 0
+      firstFrame: 180
+      lastFrame: 339
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -187,20 +184,20 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 180
     - serializedVersion: 16
       name: IdleBreath01
       takeName: IdleBreath01
       internalID: 0
-      firstFrame: 285
-      lastFrame: 395
+      firstFrame: 570
+      lastFrame: 790
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -216,13 +213,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 570
     - serializedVersion: 16
       name: StandToPickFromCrouch
       takeName: StandToPickFromCrouch
       internalID: 0
-      firstFrame: 445
-      lastFrame: 470
+      firstFrame: 890
+      lastFrame: 940
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -245,13 +242,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: CrouchToLift
       takeName: CrouchToLift
       internalID: 0
-      firstFrame: 470
-      lastFrame: 500
+      firstFrame: 940
+      lastFrame: 1000
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -274,13 +271,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: LiftToStand
       takeName: LiftToStand
       internalID: 0
-      firstFrame: 500
-      lastFrame: 535
+      firstFrame: 1000
+      lastFrame: 1070
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -303,13 +300,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: StandToPushButton
       takeName: StandToPushButton
       internalID: 0
-      firstFrame: 535
-      lastFrame: 545
+      firstFrame: 1070
+      lastFrame: 1090
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -332,13 +329,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: PushButtonToStand
       takeName: PushButtonToStand
       internalID: 0
-      firstFrame: 545
-      lastFrame: 555
+      firstFrame: 1090
+      lastFrame: 1110
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -361,13 +358,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: StandToPick
       takeName: StandToPick
       internalID: 0
-      firstFrame: 560
-      lastFrame: 565
+      firstFrame: 1120
+      lastFrame: 1130
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -390,13 +387,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: PickToLiftUp
       takeName: PickToLiftUp
       internalID: 0
-      firstFrame: 565
-      lastFrame: 570
+      firstFrame: 1130
+      lastFrame: 1140
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -419,13 +416,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: LiftUpToStand
       takeName: LiftUpToStand
       internalID: 0
-      firstFrame: 570
-      lastFrame: 575
+      firstFrame: 1140
+      lastFrame: 1150
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -448,13 +445,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: StandToLookUp
       takeName: StandToLookUp
       internalID: 0
-      firstFrame: 580
-      lastFrame: 590
+      firstFrame: 1160
+      lastFrame: 1180
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -477,13 +474,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: LookUpToStand
       takeName: LookUpToStand
       internalID: 0
-      firstFrame: 595
-      lastFrame: 605
+      firstFrame: 1190
+      lastFrame: 1210
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -506,13 +503,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: SwipeAction
       takeName: SwipeAction
       internalID: 0
-      firstFrame: 605
-      lastFrame: 620
+      firstFrame: 1210
+      lastFrame: 1240
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -535,13 +532,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: JumpingFromJoy
       takeName: JumpingFromJoy
       internalID: 0
-      firstFrame: 620
-      lastFrame: 705
+      firstFrame: 1240
+      lastFrame: 1410
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -564,13 +561,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: StandToShowPlayerItem
       takeName: StandToShowPlayerItem
       internalID: 0
-      firstFrame: 705
-      lastFrame: 720
+      firstFrame: 1410
+      lastFrame: 1440
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -593,13 +590,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 1410
     - serializedVersion: 16
       name: ShowPlayerItemToStand
       takeName: ShowPlayerItemToStand
       internalID: 0
-      firstFrame: 720
-      lastFrame: 735
+      firstFrame: 1440
+      lastFrame: 1470
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -622,13 +619,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: ShowPlayerItemToStand (1)
-      takeName: ShowPlayerItemToStand
+      name: Faint
+      takeName: Faint
       internalID: 0
-      firstFrame: 720
-      lastFrame: 735
+      firstFrame: 1470
+      lastFrame: 1550
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -651,7 +648,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 285
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -698,7 +695,242 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: fbx_PlayerCharacter_Artist01(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.00000091157824, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Artist01
+      parentName: fbx_PlayerCharacter_Artist01(Clone)
+      position: {x: -0, y: 0.77573776, z: 0.021862535}
+      rotation: {x: -0.45451993, y: 0.45451903, z: 0.5416749, w: 0.54167557}
+      scale: {x: 1, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 Pelvis
+      parentName: biped_PlayerCharacter_Artist01
+      position: {x: 0.03122861, y: -0.000000014901161, z: 0.17710622}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: biped_PlayerCharacter_Base01 L Thigh
+      parentName: biped_PlayerCharacter_Base01 Pelvis
+      position: {x: 0.00000047683716, y: 0.00000046938658, z: 0.314777}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+    - name: biped_PlayerCharacter_Base01 L Calf
+      parentName: biped_PlayerCharacter_Base01 L Thigh
+      position: {x: -0.5535779, y: 0, z: 0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 L Foot
+      parentName: biped_PlayerCharacter_Base01 L Calf
+      position: {x: -0.2809447, y: -0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: biped_PlayerCharacter_Base01 L Toe0
+      parentName: biped_PlayerCharacter_Base01 L Foot
+      position: {x: -0.0856179, y: 0.12428796, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1}
+    - name: biped_PlayerCharacter_Base01 R Thigh
+      parentName: biped_PlayerCharacter_Base01 Pelvis
+      position: {x: -0.0000004172325, y: -0.0000004246831, z: -0.31477696}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 0.9999999, y: 1, z: 1.0000002}
+    - name: biped_PlayerCharacter_Base01 R Calf
+      parentName: biped_PlayerCharacter_Base01 R Thigh
+      position: {x: -0.553578, y: -0.000000059604645, z: -0.000000029802322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: biped_PlayerCharacter_Base01 R Foot
+      parentName: biped_PlayerCharacter_Base01 R Calf
+      position: {x: -0.28094465, y: 0, z: 0.000000014901161}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 R Toe0
+      parentName: biped_PlayerCharacter_Base01 R Foot
+      position: {x: -0.08561793, y: 0.12428799, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: biped_PlayerCharacter_Base01 Spine
+      parentName: biped_PlayerCharacter_Base01 Pelvis
+      position: {x: -0.22622961, y: -0.081921004, z: 0.009030269}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: biped_PlayerCharacter_Base01 Spine1
+      parentName: biped_PlayerCharacter_Base01 Spine
+      position: {x: -0.36555004, y: -0.00028795004, z: -0.00003159046}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: biped_PlayerCharacter_Base01 Bag
+      parentName: biped_PlayerCharacter_Base01 Spine1
+      position: {x: -0.21243072, y: -0.314219, z: -0.0000005699694}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 L Clavicle
+      parentName: biped_PlayerCharacter_Base01 Spine1
+      position: {x: -0.24658644, y: -0.011264153, z: 0.20265906}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: biped_PlayerCharacter_Base01 L UpperArm
+      parentName: biped_PlayerCharacter_Base01 L Clavicle
+      position: {x: -0.11830366, y: -0.000000022351742, z: 0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: biped_PlayerCharacter_Base01 L Forearm
+      parentName: biped_PlayerCharacter_Base01 L UpperArm
+      position: {x: -0.54358536, y: -0.00000011920929, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: biped_PlayerCharacter_Base01 L Hand
+      parentName: biped_PlayerCharacter_Base01 L Forearm
+      position: {x: -0.42231542, y: 0.000000059604645, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+    - name: biped_PlayerCharacter_Base01 L Finger0
+      parentName: biped_PlayerCharacter_Base01 L Hand
+      position: {x: -0.04724902, y: 0.023977637, z: -0.08895686}
+      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+    - name: biped_PlayerCharacter_Base01 L Finger01
+      parentName: biped_PlayerCharacter_Base01 L Finger0
+      position: {x: -0.047733128, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 L Finger02
+      parentName: biped_PlayerCharacter_Base01 L Finger01
+      position: {x: -0.036239862, y: -0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: biped_PlayerCharacter_Base01 L Finger1
+      parentName: biped_PlayerCharacter_Base01 L Hand
+      position: {x: -0.16715634, y: 0.0037606955, z: -0.004802048}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.99999994}
+    - name: biped_PlayerCharacter_Base01 L Finger11
+      parentName: biped_PlayerCharacter_Base01 L Finger1
+      position: {x: -0.04500538, y: 0, z: 0.00000008940697}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 L Finger12
+      parentName: biped_PlayerCharacter_Base01 L Finger11
+      position: {x: -0.04500535, y: 0.00000011920929, z: -0.000000059604645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: biped_PlayerCharacter_Base01 Neck
+      parentName: biped_PlayerCharacter_Base01 Spine1
+      position: {x: -0.42452586, y: 0.0041068196, z: 0.000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 Head
+      parentName: biped_PlayerCharacter_Base01 Neck
+      position: {x: -0.09284866, y: 0.0021321625, z: 0.000000007450581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: biped_PlayerCharacter_Base01 EyeLeft
+      parentName: biped_PlayerCharacter_Base01 Head
+      position: {x: -0.9709612, y: 0.46064773, z: 0.31070775}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 EyeRight
+      parentName: biped_PlayerCharacter_Base01 Head
+      position: {x: -0.9709612, y: 0.4606494, z: -0.3107052}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: biped_PlayerCharacter_Base01 HairNWhiskers
+      parentName: biped_PlayerCharacter_Base01 Head
+      position: {x: -1.0075108, y: 0.00022870302, z: 9.313226e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: biped_PlayerCharacter_Base01 Ponytail1
+      parentName: biped_PlayerCharacter_Base01 Head
+      position: {x: -1.3958482, y: -0.36326888, z: 0.73998225}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 Ponytail2
+      parentName: biped_PlayerCharacter_Base01 Head
+      position: {x: -1.3958482, y: -0.36326477, z: -0.7399842}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: biped_PlayerCharacter_Base01 R Clavicle
+      parentName: biped_PlayerCharacter_Base01 Spine1
+      position: {x: -0.24658644, y: -0.011262998, z: -0.20265913}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: biped_PlayerCharacter_Base01 R UpperArm
+      parentName: biped_PlayerCharacter_Base01 R Clavicle
+      position: {x: -0.118303716, y: 0.000000014901161, z: -0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: biped_PlayerCharacter_Base01 R Forearm
+      parentName: biped_PlayerCharacter_Base01 R UpperArm
+      position: {x: -0.5435854, y: -0.000000052154064, z: 0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: biped_PlayerCharacter_Base01 R Hand
+      parentName: biped_PlayerCharacter_Base01 R Forearm
+      position: {x: -0.42231536, y: 0.000000059604645, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 R Finger0
+      parentName: biped_PlayerCharacter_Base01 R Hand
+      position: {x: -0.04724899, y: 0.023977637, z: 0.08895677}
+      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: biped_PlayerCharacter_Base01 R Finger01
+      parentName: biped_PlayerCharacter_Base01 R Finger0
+      position: {x: -0.047733188, y: 0.000000029802322, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 R Finger02
+      parentName: biped_PlayerCharacter_Base01 R Finger01
+      position: {x: -0.036239833, y: 0, z: -0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: biped_PlayerCharacter_Base01 R Finger1
+      parentName: biped_PlayerCharacter_Base01 R Hand
+      position: {x: -0.16715631, y: 0.0037608147, z: 0.0048019886}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 R Finger11
+      parentName: biped_PlayerCharacter_Base01 R Finger1
+      position: {x: -0.04500538, y: 0, z: -0.00000011920929}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    - name: biped_PlayerCharacter_Base01 R Finger12
+      parentName: biped_PlayerCharacter_Base01 R Finger11
+      position: {x: -0.04500538, y: 0, z: 0.00000023841858}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: biped_PlayerCharacter_Base01 Tail
+      parentName: biped_PlayerCharacter_Base01 Pelvis
+      position: {x: 0.100330055, y: -0.69981205, z: 0.077358805}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: biped_PlayerCharacter_Base01 Tail1
+      parentName: biped_PlayerCharacter_Base01 Tail
+      position: {x: -0.22442913, y: -0.00016599894, z: -4.6065907e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: biped_PlayerCharacter_Base01 Tail2
+      parentName: biped_PlayerCharacter_Base01 Tail1
+      position: {x: -0.22443235, y: -0.00016483665, z: -4.570211e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 Tail3
+      parentName: biped_PlayerCharacter_Base01 Tail2
+      position: {x: -0.22435462, y: -0.00015181303, z: -4.2109605e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: biped_PlayerCharacter_Base01 Tail4
+      parentName: biped_PlayerCharacter_Base01 Tail3
+      position: {x: -0.19109535, y: -0.00014579296, z: -4.0404302e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mesh_PlayerCharacter_Artist01
+      parentName: fbx_PlayerCharacter_Artist01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -708,8 +940,8 @@ ModelImporter:
     feetSpacing: 0
     globalScale: 1
     rootMotionBoneName: 
-    hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasTranslationDoF: 1
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1

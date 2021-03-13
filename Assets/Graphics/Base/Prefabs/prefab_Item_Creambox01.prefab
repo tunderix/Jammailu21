@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 371394261051897823}
   - component: {fileID: 9163080062564124719}
   - component: {fileID: 8009731745710438816}
+  - component: {fileID: -890636029853654051}
   m_Layer: 0
   m_Name: prefab_Item_Creambox01
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-890636029853654051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3531633660123041179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77350cb29b6b7b46812e64368bb88a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementEnabled: 0
+  speedVariance: 0
